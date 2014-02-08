@@ -1,5 +1,4 @@
-﻿Non-computer exercise 1: Calculate change
-=========================================
+﻿# Non-computer exercise 1: Calculate change
 
 In many supermarkets it's no longer the cashier who determines how much change a customer should
 get back (in the rare case where a customer actually pays in cash). The cashier just inserts the 
