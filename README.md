@@ -25,6 +25,11 @@ Classes are Friday 9.00am-1.30pm
 		<p>Statements</p>
 		<p>Compile and run</p>
 	  </td>
+	  <td>
+	    <p>Teachers notes</p>
+		<p>C# reading guide</p>
+		<p>Visual Studio download</p>
+      </td>
 	  <td>Sandbox</td>
 	  <td>NC1, NC2</td>
 	  <td>NC1, NC2</td>
