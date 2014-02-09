@@ -159,8 +159,9 @@ Most widespread tool for C# programming is Microsoft Visual Studio (newest
 version is 2012, which we use in this course), abbreviated MSVS.
 
 MSVS is a professional and commercial tool (Express version somewhat scaled down)
-Has quite a lot of facilities, huge knowledge base (+)
-Has quite a lot of facilities, not that easy to master (-)
+
+  * Has quite a lot of facilities, huge knowledge base (+)
+  * Has quite a lot of facilities, not that easy to master (-)
 
 We only need to use a fraction of the functionality
 
@@ -205,7 +206,7 @@ How do I open a Project/Solution in MSVS?
 Before a program can be run (executed), it must be compiled and built. MSVS will
 
   * Check that the code is vaild (correct syntax)
-  * Compile the code into “native” .NET code
+  * Compile the code into "native" .NET code
   * Build the project, making it executable
 
 Our main concern is to enter valid (and correct) code into a project. MSVS does the rest.
