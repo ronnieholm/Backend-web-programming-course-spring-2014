@@ -1,4 +1,4 @@
-# What is Back-End Web Programming?
+# What is backend web programming?
 
 A typical modern application: A Web Shop 
  
@@ -218,4 +218,46 @@ if it does what it is intended to do. That is an important difference!
 Running a program: Press the little green triangle (or press F5).
 
 # Statements
+
+At the most fundamental level, all C# programs consist of a collection of C# *statements*.
+
+Statements are organized into *methods* and *classes*; we'll get to that later.
+
+Statements are instructions to the program about what to do next. Examples are:
+
+  * Do some arithmetic or logical calculation
+  * Read or write data to e.g. a file, the screen, etc.
+  * Control the "flow of execution"
+  * Etc.
+
+Only common property for all statements: they end with a ";" (semicolon).
+
+Depending on their purpose, a statement has a certain syntax.
+
+Syntax is very important, it MUST be obeyed 100%. If not, you will get an 
+error message from MSVS, if you try to run the program. In fact, If a statement 
+is not syntactically correct, you will be notified even before running the 
+program! Wavy red lines will appear in the code.
+
+You will be annoyed by this… But there is no way around it! (Well, it is 
+possible to switch off, but better to get used to it).
+
+DO NOT ignore the red lines! They indicate that something is wrong, so fix 
+it right away. Can be somewhat annoying that they appear as soon as you 
+type in a statement.
+
+If an error appears – hover the mouse over the error indicator. A tooltip 
+with an error description will appear. Alternatively press F6 (build solution) 
+– a list of errors will appear.
+
+Error descriptions can sometimes be more confusing than helpful – best 
+advice is to read the code again, and use common sense.
+
+Good advice when programming:
+
+  * Fix errors as soon as possible
+  * Keep the number of "open" errors minimal
+  * Test whenever possible
+
+# Programming Fundamentals
 
