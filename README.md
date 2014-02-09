@@ -18,7 +18,16 @@ Classes are Friday 9.00am-1.30pm
 	  <th>Solved exercises</th>
     </tr>
 	<tr>
-
+	  <td>6</td>
+	  <td>
+		<p>Introduction and setup</p>
+		<p>What is BEWP?</p>
+		<p>Statements</p>
+		<p>Compile and run</p>
+	  </td>
+	  <td>Sandbox</td>
+	  <td>NC1, NC2</td>
+	  <td>NC1, NC2</td>
 	</tr>
   </table>
 
