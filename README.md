@@ -8,6 +8,20 @@ Room 122
 
 Classes are Friday 9.00am-1.30pm
 
+  <table>
+    <tr>
+	  <th>Week</th>
+	  <th>Topics</th>
+	  <th>Material</th>
+	  <th>Projects</th>
+	  <th>Exercises</th>
+	  <th>Solved exercises</th>
+    </tr>
+	<tr>
+
+	</tr>
+  </table>
+
   * Week 6
     * Topics
 	  * Introduction and setup
