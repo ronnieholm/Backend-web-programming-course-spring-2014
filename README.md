@@ -24,32 +24,15 @@ Classes are Friday 9.00am-1.30pm
 		<p>What is BEWP?</p>
 		<p>Statements</p>
 		<p>Compile and run</p>
+		<p>MSVS2012/2013 Express download/install</p>
 	  </td>
 	  <td>
-	    <p>Teachers notes</p>
-		<p>C# reading guide</p>
-		<p>Visual Studio download</p>
+	    <p><a href="blob/master/LectureNotes.md">Lecture notes</a></p>
+		<p><a href="">C# reading guide</a></p>
+		<p><a href="">Visual Studio download</a></p>
       </td>
 	  <td>Sandbox</td>
 	  <td>NC1, NC2</td>
 	  <td>NC1, NC2</td>
 	</tr>
   </table>
-
-  * Week 6
-    * Topics
-	  * Introduction and setup
-	  * What is BEWP?
-	  * Statements
-	  * Compile and run
-	* Material
-	  * Teachers notes
-	  * Visual Studio download
-	* Projects
-	  * None
-	* Exercies
-	  * NC 1
-	  * NC 2
-	* Solved exercises
-	  * NC 1
-	  * (NC 2)
