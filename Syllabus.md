@@ -30,7 +30,7 @@ This guide indicates which parts of the book are relevant for a specific topic.
 	</tr>
 	<tr>
 	  <td>Logic</td>
-	  <td>49-53</td>  
+	  <td>49-57</td>  
 	</tr>
 	<tr>
 	  <td>Debugging, part 1</td>

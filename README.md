@@ -39,7 +39,7 @@ Classes are Friday 9.00am-1.30pm
 	  <td>7</td>
 	  <td>
 		<p>C# basics</p>
-		<p>Types?</p>
+		<p>Types</p>
 		<p>Variables</p>
 		<p>Arithmetic</p>
 		<p>Logic</p>
