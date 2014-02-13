@@ -1,13 +1,15 @@
-﻿# Exercise 1: Cars
+﻿# Exercise 2: Bank account
 
-1. For each variable consider if the purpose of the variable is 
-clearly understandable from its name. 
-2. For each variable consider what actual values each variable 
-can have. Is this consistent with the purpose of the variable? 
-3. For each variable, make a assignment statement that assigns 
-a proper value to the variable. Do this in the place indicated 
-by the comments in the code. 
-4. Make sure that your program can compile. Press F6, and 
-make sure you get 0 errors (note that you'll probably get 
-some warnings about the variables not being used for 
-anything. Ignore those warnings for now). 
+Consider the problem of representing the properties of a 
+bank account. 
+ 
+1. Come up with as many relevant properties for a bank account 
+that you can think of (to get you started: name of account 
+holder, bank account number, ...) 
+2. Declare variables in the code to represent these properties. 
+Remember to 
+a. Choose a good name for each variable 
+b. Choose a suitable type for each variable 
+3. Following the variable declarations, assign proper 
+values to each variable, and make sure to check your 
+code can actually compile (hit F6 and make sure there're no errors) 
