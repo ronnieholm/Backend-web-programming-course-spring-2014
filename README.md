@@ -18,7 +18,6 @@ Classes are Friday 9.00am-1.30pm
 	  <th>Solved exercises</th>
     </tr>
 	<tr>
-
 	  <td>6</td>
 	  <td>
 		<p>Introduction and setup</p>
@@ -36,7 +35,6 @@ Classes are Friday 9.00am-1.30pm
 	  <td>NC1, NC2</td>
 	  <td>NC1, NC2</td>
 	</tr>
-
 	<tr>
 	  <td>7</td>
 	  <td>
@@ -54,6 +52,4 @@ Classes are Friday 9.00am-1.30pm
 	  <td>NC1, NC2</td>
 	  <td>NC1, NC2</td>
 	</tr>
-
-
   </table>

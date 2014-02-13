@@ -5,26 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
-     
- 
- 
- 
- 
- 
- 
-    1. Given the Danish bill system of 1000, 500, 100, 50 
-       And coin system of 20, 10, 5, 2, 1 coins
-       And dueAmount of 354
-       And customerPay of 500
-    2. Then totalChange = customerPay - dueAmount
-    3. Set remainingChange = totalChange
-    4. If remainingChange > 0
-    5.   typeOfChange = find the largest bill or coin just below remainingChange
-    6.   numberOfTypeOfChange = remainingChange / typeOfChange rounded down
-    7.   Output "numberOfTypeOfChange x typeOfChange"
-    8.   reset remainingChange = remainingChange - typeOfChange * numberOfTypeOfChange
-    9.   Goto step 4
-    10. Done     
+    1. Set current maximumAgeEncountered = 0
+    2. For each person in people
+         If current person's age > maximumAgeEncountered
+         Then reset maximumAgeEncountered = current person's age
+    3. Done
  */
 
 namespace Exercises.NC2FindOldestPerson {
