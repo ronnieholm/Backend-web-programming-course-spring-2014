@@ -18,6 +18,7 @@ Classes are Friday 9.00am-1.30pm
 	  <th>Solved exercises</th>
     </tr>
 	<tr>
+
 	  <td>6</td>
 	  <td>
 		<p>Introduction and setup</p>
@@ -35,4 +36,24 @@ Classes are Friday 9.00am-1.30pm
 	  <td>NC1, NC2</td>
 	  <td>NC1, NC2</td>
 	</tr>
+
+	<tr>
+	  <td>7</td>
+	  <td>
+		<p>C# basics</p>
+		<p>Types?</p>
+		<p>Variables</p>
+		<p>Arithmetic</p>
+		<p>Logic</p>
+	  </td>
+	  <td>
+	    <p><a href="LectureNotes.md">Lecture notes</a></p>
+		<p><a href="Syllabus.md">Syllabus</a></p>
+      </td>
+	  <td>1, 2, 3, 4, 5, 6</td>
+	  <td>NC1, NC2</td>
+	  <td>NC1, NC2</td>
+	</tr>
+
+
   </table>
