@@ -28,8 +28,8 @@ Classes are Friday 9.00am-1.30pm
 	  </td>
 	  <td>
 	    <p><a href="LectureNotes.md">Lecture notes</a></p>
-		<p><a href="">C# reading guide</a></p>
-		<p><a href="">Visual Studio download</a></p>
+		<p><a href="Syllabus.md">Syllabus</a></p>
+		<p><a href="http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-desktop">Visual Studio Express 2013 download</a></p>
       </td>
 	  <td>Sandbox</td>
 	  <td>NC1, NC2</td>
