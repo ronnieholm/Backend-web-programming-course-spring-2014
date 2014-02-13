@@ -1,5 +1,8 @@
 ﻿# Exercise 1: Car
 
+The code contains several *declarations of variables*. All the 
+variables are supposed to represent facts about a car.
+
 1. For each variable consider if the purpose of the variable is 
 clearly understandable from its name. 
 2. For each variable consider what actual values each variable 
