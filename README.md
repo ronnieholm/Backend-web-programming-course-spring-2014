@@ -27,7 +27,7 @@ Classes are Friday 9.00am-1.30pm
 		<p>MSVS2012/2013 Express download/install</p>
 	  </td>
 	  <td>
-	    <p><a href="blob/master/LectureNotes.md">Lecture notes</a></p>
+	    <p><a href="LectureNotes.md">Lecture notes</a></p>
 		<p><a href="">C# reading guide</a></p>
 		<p><a href="">Visual Studio download</a></p>
       </td>

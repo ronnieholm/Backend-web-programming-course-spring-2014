@@ -10,7 +10,7 @@ This guide indicates which parts of the book are relevant for a specific topic.
   <table>
     <tr>
 	  <th>Topic</th>
-	  <th>Central</th>
+	  <th>Pages</th>
 	</tr>
 	<tr>
 	  <td>Environment (Visual Studio)</td>
