@@ -1,4 +1,4 @@
-﻿# Exercise 3: Arithmetic
+﻿# Exercise 3: Arithmetic I
 
 The code contains several arithmetic statements (eight in total). 
 Note that the program does not print anything if you run it. 
@@ -19,7 +19,7 @@ to
 
     Console.WriteLine("The value of a is : {0}", a); 
  
-and likewise for the subsequent cases. 
+and likewise for subsequent cases. 
  
 Remember that you run the program by pressing F5 or clicking on 
 the small green triangle.

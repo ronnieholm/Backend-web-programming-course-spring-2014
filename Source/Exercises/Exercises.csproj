@@ -41,13 +41,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exercise1\Car.cs" />
+    <Compile Include="Exercise2\BankAccount.cs" />
+    <Compile Include="Exercise3\Arithmetics.cs" />
+    <Compile Include="Exercise4\Arithmetics.cs" />
+    <Compile Include="Exercise5\LogicExpressions.cs" />
+    <Compile Include="Exercise6\LogicExpressions.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />
+    <Compile Include="NC2FindOldestPerson\Solution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Exercise1\README.md" />
+    <None Include="Exercise2\README.md" />
+    <None Include="Exercise3\README.md" />
+    <None Include="Exercise4\README.md" />
+    <None Include="Exercise5\README.md" />
+    <None Include="Exercise6\README.md" />
     <None Include="NC1CalculateChange\README.md" />
+    <None Include="NC2FindOldestPerson\README.md" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Exercises {
     class Program {
         static void Main(string[] args) {
+            Console.WriteLine("Set me to the correct project");
         }
     }
 }
