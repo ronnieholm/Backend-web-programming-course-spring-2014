@@ -27,7 +27,7 @@ using System.Threading.Tasks;
     10. Done     
  */
 
-namespace Exercises {
-    class NC2FindOldestPerson {
+namespace Exercises.NC2FindOldestPerson {
+    class Solution {
     }
 }

@@ -20,7 +20,7 @@ using System.Threading.Tasks;
     10. Done     
  */
 
-namespace Exercises {
-    class NC1CalculateChange {
+namespace Exercises.NC1CalculateChange {
+    class Solution {
     }
 }
