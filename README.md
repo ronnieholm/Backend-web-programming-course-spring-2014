@@ -31,7 +31,7 @@ Classes are Friday 9.00am-1.30pm
 		<p><a href="Syllabus.md">Syllabus</a></p>
 		<p><a href="http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-desktop">Visual Studio Express 2013 download</a></p>
       </td>
-	  <td>Sandbox</td>
+	  <td></td>
 	  <td>NC1, NC2</td>
 	  <td>NC1, NC2</td>
 	</tr>
