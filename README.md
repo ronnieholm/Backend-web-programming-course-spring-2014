@@ -49,7 +49,7 @@ Classes are Friday 9.00am-1.30pm
 		<p><a href="Syllabus.md">Syllabus</a></p>
       </td>
 	  <td>1, 2, 3, 4, 5, 6</td>
-	  <td>NC1, NC2</td>
-	  <td>NC1, NC2</td>
+	  <td></td>
+	  <td></td>
 	</tr>
   </table>

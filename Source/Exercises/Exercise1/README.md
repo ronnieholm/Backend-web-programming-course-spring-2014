@@ -13,4 +13,4 @@ by the comments in the code.
 4. Make sure that your program can compile. Press F6, and 
 make sure you get 0 errors (note that you'll probably get 
 some warnings about the variables not being used for 
-anything. Ignore those warnings for now). 
+anything. Ignore those warnings for now). 
