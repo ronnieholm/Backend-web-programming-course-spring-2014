@@ -48,8 +48,8 @@ Classes are Friday 9.00am-1.30pm
 	    <p><a href="LectureNotes.md">Lecture notes</a></p>
 		<p><a href="Syllabus.md">Syllabus</a></p>
       </td>
-	  <td>1, 2, 3, 4, 5, 6</td>
 	  <td></td>
+	  <td>1, 2, 3, 4, 5, 6</td>
 	  <td></td>
 	</tr>
   </table>
