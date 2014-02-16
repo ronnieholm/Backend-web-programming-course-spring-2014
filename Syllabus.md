@@ -117,3 +117,6 @@ This guide indicates which parts of the book are relevant for a specific topic.
 	  <td>87-90</td>
 	</tr>
   </table>
+
+The C# Fundamentals Development for Absolute Beginners:
+http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners
