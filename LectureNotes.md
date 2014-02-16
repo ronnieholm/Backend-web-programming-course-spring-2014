@@ -584,5 +584,26 @@ Another way to look at the values these operators produce is to use a *truth tab
 	<td>True</td>
 	<td>False</td>
   </tr>
+  <tr>
+    <td>True</td>
+	<td>False</td>
+	<td>False</td>
+	<td>True</td>
+	<td>False</td>
+  </tr>
+  <tr>
+    <td>False</td>
+	<td>True</td>
+	<td>False</td>
+	<td>True</td>
+	<td>True</td>
+  </tr>
+  <tr>
+    <td>False</td>
+	<td>False</td>
+	<td>False</td>
+	<td>False</td>
+	<td>True</td>
+  </tr>
 </table>
 
