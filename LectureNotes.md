@@ -569,5 +569,20 @@ Logical expressions become harder and harder to understand as they grow in lengt
 
 Another way to look at the values these operators produce is to use a *truth table*:
 
-
+<table>
+  <tr>
+    <th>A</th>
+	<th>B</th>
+	<th>A && B</th>
+	<th>A || B</th>
+	<th>!A</th>
+  <tr>
+  <tr>
+    <td>True</td>
+	<td>True</td>
+	<td>True</td>
+	<td>True</td>
+	<td>False</td>
+  </tr>
+</table>
 
