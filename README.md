@@ -52,4 +52,21 @@ Classes are Friday 9.00am-1.30pm
 	  <td>1, 2, 3, 4, 5, 6</td>
 	  <td></td>
 	</tr>
+	<tr>
+	  <td>8</td>
+	  <td>
+		<p>Using classes and objects</p>
+		<p>Creating objects</p>
+		<p>Using methods on objects</p>
+		<p>Defining classes</p>
+		<p>Method definitions</p>
+	  </td>
+	  <td>
+	    <p><a href="LectureNotes.md">Lecture notes</a></p>
+		<p><a href="Syllabus.md">Syllabus</a></p>
+      </td>
+	  <td></td>
+	  <td>7, 8, 9, 9a, 9b, 10, 11, 12</td>
+	  <td></td>
+	</tr>
   </table>
