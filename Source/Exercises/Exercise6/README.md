@@ -24,4 +24,4 @@ If you have forgotten how to print out the value of a variable, then
 have a look at exercise 5. 
  
 If you have time left, try to vary the initial values of *a* and *b*, and 
-see how it effects the results
+see how it effects the results.

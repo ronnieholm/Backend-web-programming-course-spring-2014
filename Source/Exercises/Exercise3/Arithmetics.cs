@@ -11,7 +11,7 @@ namespace Exercises.Exercise3 {
             int a = 20;
             a = a + 30;
             a = a / 6;
-            // Console.WriteLine("The value of a is : {0}", a);
+            Console.WriteLine("The value of a is : {0}", a);
 
             // Case 2
             int b = 20;

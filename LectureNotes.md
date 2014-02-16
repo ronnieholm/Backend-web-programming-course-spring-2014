@@ -8,9 +8,15 @@ What tasks are involved in a Web Shop?
   * Receiving user input 
   * Constructing an order 
   * Storing the resulting order 
-  * Storing other data (user preferences, ...)We usually divide such an application into "layers" (although terms may vary).  * GUI Layer 
+  * Storing other data (user preferences, ...)
+
+We usually divide such an application into "layers" (although terms may vary).
+
+  * GUI Layer 
   * Logic Layer 
-  * Data layer GUI Layer: responsible for presenting content and managing user 
+  * Data layer 
+
+GUI Layer: responsible for presenting content and managing user 
 interaction (receiving input, showing output).
  
 Logic Layer: responsible for applying business rules (logic) to 
@@ -25,14 +31,18 @@ subsystems like an order shipment system.
 different parts of an application are different in nature
   * Flexibility. Having an application pieced together by 
 dedicated subsystems makes it easier to replace or 
-supplement the GUI, while preserving logic/data parts## PBA Web terminology
+supplement the GUI, while preserving logic/data parts
+
+## PBA Web terminology
+
   * GUI Layer is Front End (FE) 
   * Logic layer is Back End (BE) 
   * Data Layer is Databases (DB) 
 
 In backend we'll thus concentrate on *tools and techniques 
 for implementing business rules and logic, using a so-called 
-Object-Oriented programming language*. 
+Object-Oriented programming language*. 
+
 Note: Some might know ASP.NET technology, is that not Back-End? In this 
 context, we don't consider it "pure" backend since it deals with 
 the creation of HTML, i.e., GUI. It's a bit in the grey zone, though.
@@ -261,4 +271,303 @@ Good advice when programming:
   * Test whenever possible
 
 # Programming Fundamentals
+
+What is programming? Presentation, manipulation and storage of data.
+
+In Web-programming terms
+
+  * Presentation: Front-End
+  * Manipulation (Calculation): Back-End
+  * Storage: Databases
+
+Data manipulation can (a bit abstract) be broken down to:
+
+  * Receive the data needed for the calculation
+  * Store the data in memory, in suitable data structures
+  * Perform manipulation, according to business logic
+  * Store the result in suitable data structures
+  * Enable the user to access the result
+
+In back-end programming, we concentrate on:
+
+  * Data representation, using suitable data structures
+  * Data manipulation, using suitable logic
+
+What types of data do we wish to manipulate:
+
+  * Numerical data
+  * Text data
+  * Logical data (true/false, Boolean logic)
+  * (Binary data, e.g. pictures) ¡V not the primary focus
+
+# Types and variables
+
+How does a program store the data it needs to manipulate? Data is 
+stored in the memory of the computer (RAM).
+
+What is computer memory actually? Just a lot of elements (called *bits*), 
+each of which can be either 0 or 1. We refer to a collection of eight bit 
+as a *byte*. 256 possible distinct bytes.
+
+Each byte in memory has an address. A modern computer has billions
+of bytes (one billion bytes = Gigabyte).
+
+Raw storage of data – no matter the type – amounts to setting the value 
+of certain bytes at certain addresses in memory. This is possible,
+but somewhat tedious.
+
+Almost all programming languages therefore support the use of so-called 
+*variables*.
+
+What is a variable actually? It is a piece of memory; i.e. a certain 
+amount of bytes, located at a certain address in memory.
+
+In order to make it easy – for humans – to use variables, we can give 
+a variable a *name*, instead of having to refer to the actual address 
+in memory. Also, we do not need to define the actual address of the
+variable ourselves – the program does that for us.
+
+In addition to this, we must choose a *type* for the variable. This defines 
+the kind of data the variable can store.
+
+Some types for storing data (primitive types, built-in):
+
+  * int: whole numbers (no decimals), from about -2,000,000,000 to 2,000,000,000. Uses 32 bits = 4 bytes
+  * double: decimal numbers, with "high" precision. Why not exact values? Uses 64 bits = 8 bytes
+  * bool: a true/false value. Usually uses 4 bytes, even though it in theory should use much less
+  * string: A text of arbitrary length. Uses one byte for each character in the string.
+
+The great advantage of having types is that we do not have to convert the 
+data from the “human” type (e.g. a string) to the "computer" type, which 
+is always 0/1 values.
+
+Declaration of a variable in C#:
+
+    // Reserve space in memory for an int,
+    // refer to the address by the name “age”
+    int age;
+
+    // Put the value 24 in the bytes
+    // referred to by “age”
+    age = 24;
+
+Note that the above types can also be written like *Boolean* (for bool), 
+*Int32* (for int), *Double* (for double), and *String* (for string). 
+Choose the name that you prefer.
+
+# Arithmetic
+
+A very important part of most programming tasks is arithmetic. Almost 
+all programming languages support arithmetic, since much data manipulation 
+has an arithmetic nature – we perform calculations. The specific syntax
+may vary somewhat.
+
+C# supports most common arithmetic operations, but there are certain 
+operations that differ from "classic" arithmetic.
+
+We have already seen assignment:
+
+    int age;
+    age = 24; // Assignment, NOT an expression
+
+Very important to note that this means, "set age equal to 24". It does 
+NOT mean "age is equal to 24" (which may be true or false).
+
+Simple arithmetic:
+
+    int age;
+    age = 24 + 32; // Now age is 56
+    age = age + 10; // Now age is 66
+
+    int legalAge = 18;
+    age = legalAge + 10; // Now age is 28
+
+The right-hand side is always evaluated first, and the result can e.g. 
+be stored in a variable. The same variable can occur on both sides of the "="
+(assignment) sign.
+
+Note that the exact type is important. Consider this assignment:
+
+    int a = 7;
+    int b = 4;
+    int c = a/b; // a divided by b
+
+The result is NOT 1.75 as you might expect but 1. When doing arithmetic 
+with integers, the result will also be an integer. Note also that there 
+is no rounding of the result. It might seem more natural that c should 
+become 2, but it doesn’t.
+
+There are some non-standard operators in C#. For instance the "remainder" 
+operator % (or "modulo"):
+
+    int a = 7 % 4;
+
+The result of the above is 3 – the remainder when dividing 7 with 4 (integer division)
+
+Usual rules for precedence apply, so e.g.
+
+    int a = 2*3+4; // This is 10, NOT 14
+
+Some forms of conversion between types are possible, like:
+
+    int a = 7;
+    double b = a;     // b is now 7.00000
+    double c = b / 4; // c is now 1.75
+
+Type conversion is a larger subject – short story: you can convert automatically 
+when you do not lose information (7 -> 7.0 OK, 7.4 -> 7 not OK).
+
+Use of brackets is also allowed, and follows standard rules. Good idea to use 
+brackets to increase readability, even if they are not strictly necessary.
+
+# Simple data output on the screen
+
+Even though Back-End programming is not about GUI, we still need – as part of 
+learning about programming – to output data to the screen, so we can see if our 
+program works as expected. We have actually seen this already:
+
+    Console.WriteLine("Hello Class");
+
+So, the statement *Console.WriteLine* will output something on the screen. 
+In the above example, it will output:
+
+    Hello Class
+
+In general, *Console.WriteLine* will output the data we specifiy in the 
+brackets () following the *Console.WriteLine* words them-selves. If we 
+write something within quotation marks, like "Hello Class", then this is 
+interpreted as data of the type string, and the string (minus the 
+quotation marks themselves) is printed. However, Console.WriteLine* is 
+rather flexible. Consider the below piece of code:
+
+    int age = 21;
+    Console.WriteLine(age);
+
+If you execute this piece of code, the program will print:
+
+    21
+
+Why did it not print the word "age" instead? In general, *Console.WriteLine*
+will print a string. If we put something else in the bracket, the program 
+will try to convert it to a string. That is, not the variable itself, but 
+the value of the variable. In fact, all values can be converted to a string.
+What was actually printed in the example is the string "21", because the 
+value 21 was conver-ted to the string "21". This can be done for all types 
+of values.
+
+Also very useful is the ability to "chain together" values, for instance like:
+
+    int age = 21;
+    Console.WriteLine("The age is " + age);
+
+If you execute this piece of code, the program will print:
+
+    The age is 21
+
+What is going on inside the brackets? Actually several things. First, it 
+seems we are adding two things – a string and an int. Can we even do that? 
+In general, you can only add things of the same type. But since any value 
+can be converted into a string, the value of age (21) can be converted 
+into a string. So, we are then trying to add "The age is " and "21". Since 
+addition of two string is defined as concatenating the string (writing 
+the first string after the other), the result of the addition is "The age 
+is 21", which is then printed to the screen. This ability if chaining 
+together several values (you can add as many values as you like inside 
+the brackets) is very useful for outputting a message on the screen.
+
+Using string concatenation is one way of printing a longer message – 
+consisting of a mix of text parts and variable values – on the screen, 
+using *Console.WriteLine*. However, there is another way to do this 
+which might be more convenient, by using a so-called formatting string.
+
+Suppose we have two variables like:
+
+    string name = "James"; 
+	int age = 23;
+
+and want to print a message like:
+
+    James is 23 years old
+
+Using a formatting string, this will look like:
+
+    Console.WriteLine("{0} is {1} years old", name, age);
+
+Notice the use of the curly braces, like the {0} and {1}, inside the string. 
+This should be understood as: Take the value from the first variable 
+following the string (in this case, the variable called *name*), and 
+replace {0} with that value. Then take the value from the next variable (*age*),
+and replace {1} with that value. So in this example, {0} is replaced with 
+"James", and {1} is replaced with "23", producing the string above. Note that 
+you can use this principle for as many variables as you wish, by 
+adding {2}, {3} etc. to the formatting string, and adding the variables 
+themselves after the formatting string (separated by comma).
+
+# Logic
+
+The ability to work with *Boolean logic* is also a very important feature of C#.
+
+Boolean logic: expressions can evaluate to true or false. Becomes very 
+important for controlling the flow of execution through control statements (later).
+
+The most common use of boolean logic is when testing for *equality* or 
+testing for a *relation* (strictly speaking, equality is also a type of relation).
+
+Testing for equality: Are two entities (e.g. numbers) equal to each other, or 
+different from each other.
+
+Testing for relation: Do two entities (e.g. numbers) have a parti-cular 
+relation to each other, like e.g. the first being greater than the other.
+
+Just like for arithmetic there are a number of relational (or logic) operators
+available in C#:
+
+  * == means "equal to" (notice two equal-signs)
+  * != means "not equal to"
+  * > means "greater than"
+  * < means "smaller than"
+  * >= means "greater than or equal to"
+  * <= means "smaller than or equal to"
+
+Notice that we use these operators to *compare* values, not to change values.
+
+Any expression using these relational operators will evaluate to either *True*
+or *False* which are exactly the values a variable of type *bool* can have.
+
+    int a = 7;
+    bool b = (a == 7);   // b will be True
+    bool c = (a < 7);    // c will be False
+    bool d = (a <= 7);   // d will be True
+
+Fairly straightforward for integers, slightly more tricky for double (decimal numbers).
+4.0000000002 is not equal to 4.0000000001 (but maybe it is "close enough"?).
+
+Comparing strings is also done using the "==" operator.
+
+How can we test if the value of a variable is inside an interval, e.g. between 10 and 20 (included)?
+
+    int a = 14;
+    bool lowLimitOK = (a >= 10);
+    bool highLimitOK = (a <= 20);
+    bool isInInterval = lowLimitOK && highLimitOK;
+
+Notice the operator && – this means "and".
+The expression A && B is only true if A is true *and* b is true as well.
+
+We also have an || operator – this means "or".
+The expression A || B is true if A is true *or* b is true. Note that the expression is also true if both A and B are true.
+
+Finally, we have the ! operator – this means "not".
+The expression !A is true if A is false and vice versa. The ! operator can be said to "reverse" the value of an expression.
+
+"or" is obviously more forgiving than "and". By using the operators, we can 
+combine expressions to form quite complicated expressions:
+
+    bool isOK = ((a < 20) && (a > 10)) || (a > 60);
+
+Logical expressions become harder and harder to understand as they grow in length.
+
+Another way to look at the values these operators produce is to use a *truth table*:
+
+
 
