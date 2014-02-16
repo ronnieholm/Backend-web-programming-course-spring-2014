@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace Exercises.Exercise4 {
     class Arithmetics {
         public void MyCode() {
-
         }
     }
 }
