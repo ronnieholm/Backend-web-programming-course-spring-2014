@@ -16,4 +16,4 @@ Observe how the Car class is used. Make sure you understand how:
   * Return values are used 
  
 If you have time left you can try to create a third Car object 
-yourself, and call some methods on the object.
+yourself, and call some methods on the object.

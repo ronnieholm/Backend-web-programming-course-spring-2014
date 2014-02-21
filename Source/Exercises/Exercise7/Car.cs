@@ -40,8 +40,8 @@ namespace Exercises.Exercise7 {
     */
 
     class Car {
-        private String brand;
-        private String modelName;
+        private string brand;
+        private string modelName;
         private double horsePower;
 
         // This constructor creates a Car object where fields are set to "empty" values
@@ -75,12 +75,12 @@ namespace Exercises.Exercise7 {
         }
 
         // Returns the brand of the Car
-        public String GetBrand() {
+        public string GetBrand() {
             return brand;
         }
 
         // Returns the model name of the Car
-        public String GetModelName() {
+        public string GetModelName() {
             return modelName;
         }
 
