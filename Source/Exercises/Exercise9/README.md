@@ -45,7 +45,8 @@ ReturnToLibrary in between those calls. That does not make
 sense in the real world. Could we somehow change the code 
 to handle this (Hint: That would probably require use of a 
 conditional statement, which we have not really talked about 
-yet)? 
+yet)? 
+
 
 
 

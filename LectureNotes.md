@@ -607,3 +607,405 @@ Another way to look at the values these operators produce is to use a *truth tab
   </tr>
 </table>
 
+# The concept of functions
+
+With arithmetic and boolean expressions we can begin to write non-trivial pieces 
+of business logic. For instance, we can calculate the average of three integers:
+
+    int average = (a1 + a2 + a3) / 3;
+
+This is rather simple, but if we must do this many places in our code, it can 
+become tedious to write again and again. This is even more problematic if the logic 
+is more complex. Instead of this, we would like to define the logic in *one* place, 
+and then *refer* to that logic instead of writing it again over and over. We can 
+do this by defining a function.
+
+A function is a fundamental concept in programming. The syntax may vary from language
+to language, but you always need to:
+
+  - *Name* the piece of logic so you can refer to it
+  - Define what *input* the function needs
+  - Define the *logic* of the function
+  - Define what the *output* of the function is
+
+A function for calculating average as per above could in C# look something like
+this (details of syntax not so important yet):
+
+    int CalculateAverage(int val1, int val2, int val3) {
+        int average = (val1 + val2 + val3) / 3;
+        return average;
+    }
+
+This function is called *CalculateAverage*, takes three integer as input, and 
+produces one integer value as output.
+
+We can now refer to this logic when we wish to calculate an average. For the 
+previous example, it will look like:
+
+    int average = CalculateAverage(a1, a2, a3);
+
+We say that we *call* or *invoke* the function CalculateAverage. Now the caller 
+of the function does not need to know the details of the logic, only how to refer to it.
+
+When we call the function, we can use the output – which is more precisely called 
+the *return value* – in the same way as any other value, for instance in an 
+assignment statement as above. We can even use function calls in expressions, like:
+
+    int total = func1(x) + func2(y);
+
+assuming that the functions *func1* and *func2* were defined.
+
+You can compare a function in C# with a function in mathematics: it takes some 
+input, and produces some output, depending on the specific nature of the function. 
+In programming, a function can, however, take many values (even zero) as input.
+
+# Pre-OO programming
+
+We have now been introduced to types and variables, basic arithmetic and 
+logic statements, and the concept of functions.
+
+In the "old days" of computer programming (before 1990) – before *Object-Oriented 
+programming* – this was more or less the level of abstraction programs were written at.
+
+  - Good: using variables and types allows us not to worry about details of data 
+    representation and memory management.
+  - Bad: still quite far between real-life concepts such as Student, Employee, Animal, ...
+    and data representation.
+
+Note that it is quite possible to make very complex software using this "old school" 
+style. Still, it was recognised that a different "paradigm" would make it possible 
+to create better representations of real-life concepts in software.
+
+# Object-oriented (OO) Programming
+
+In non-OO programming, data and functions are separated. No encapsulation, data 
+belonging to the same conceptual entity is spread out over multiple data structures.
+
+In Object-Oriented programming, data and functions are joined into objects. 
+The state (data) and behavior (methods, which is essentially the same as functions) 
+of objects of a certain type are specified in a class definition.
+
+Advantages:
+
+  - Code structure will be more similar to conceptual models.
+  - Encapsulation – the user of a certain class only gets to know what the 
+    user needs to know. There is freedom to change the internal structure of a class.
+  - Reuse – OO contains facilities that allows reuse of code through e.g. inheritance.
+
+NOTE: OO is still "just" a tool for helping human beings in developing computer programs 
+– internal representation in memory is the same as before.
+
+# The Class concept
+
+A class definition is a "recipe" or "blueprint" that defines how an object of this 
+particular class will behave.
+
+A class definition defines the objects "interface" to the outside world, by 
+defining methods that a user of the object can invoke on the object. This is 
+very similar to the *functions* we discussed earlier.
+
+Methods are collections of statements, such that a sequence of statements can 
+easily be executed by "calling" the method. By "calling" we mean that somebody 
+invokes the method, thereby executing the statements in the method.
+
+A class definition also defines the internal structure of the object, more 
+specifically the *state* of the object, which is represented by one or more 
+*instance fields* (a special kind of variables).
+
+A class definition may also define some internal methods, that can help the 
+object perform its tasks, without being directly available to an external user 
+of the object.
+
+The interface to the external user should prefereably not change. If it changes, 
+the user of the object may have to change his code, and we wish to avoid that. 
+As long as the interface does not change, we have freedom to change the internal 
+structure, without affecting an external user.
+
+# Using objects of an existing class
+
+It is possible to start using classes without actually knowing anything about 
+how to define classes.
+
+We use a class by creating an object of that class. That is, an object which 
+will behave as specified in the class definition.
+
+    // Create a new Student object
+    Student s1 = new Student();
+
+Note that this is actually quite similar to a statement like:
+
+    int age = 19;
+
+On the left-hand side, we have the declaration of a variable, consisting of a 
+*type* and a *name* of the variable.
+
+On the right-hand side, we have an actual value which we assign to the variable. 
+In the new case, that value is actually a *new object* of the type *Student*.
+
+The *new* keyword is always used when creating a new object followed by the 
+name of the class (here Student).
+
+Now the variable *s1* refers (points to) to an object of type Student and we 
+can begin to call methods on the object.
+
+When a variable refers to an object of a certain type, we can call methods on 
+that object by using the so-called "dot" syntax:
+
+    // Call a public method
+    s1.PrintName();
+
+Notice the dot (full stop) that follows the variable name. After the dot, 
+we write the *name* of the method we wish to use.
+
+How can we know what methods that are available? If we have written the 
+method ourselves. In a more professional system, there will be some 
+documentation of the available methods that you can refer to.
+
+In Visual Studio, you will see that a list box of available methods pops up,
+as soon as you type the dot. Don’t be confused.
+
+In general in order to call a method on an object, we must supply
+
+  - The method name
+  - Any parameters needed (the parameter list)
+
+Some methods may require information from the caller in order to do its job. 
+We could imagine a method on a Student object:
+
+    s1.SetTestResult("English", 80);
+
+This method requires the caller to provide two *parameters*: a string (the name 
+of the subject which was tested for), and an int (the result of the test). 
+arameters are always provided inside the brackets () that follows the method 
+name, must be provided in the correct order, and must have the correct type.
+
+Other methods may return information to the caller. This is called a *return value*. 
+This will be indicated in the documentation. The special return value *void* means 
+"no return value". It may seem strange that you have to specify that a method does 
+not return any information – couldn’t we just not write anything? The syntax of 
+C# is so that you *must* specifiy what a method will return to the caller, so the 
+word void has this special meaning of indicating that nothing comes back when 
+calling this method.
+
+If we want to use the return value for something (we usually do), we need to 
+"pick it up" in a variable:
+
+    int average = s1.GetAverageTestScore();
+
+Now the variable *average* will have the value which was returned by the method call.
+
+Note that when a method call returns a value that value can be used directly 
+just as a simple variable, e.g. like:
+
+    Console.WriteLine(s1.GetAverageTestScore());
+
+We *cannot*, however, make assignment in this way:
+
+    // NOTE: This will NOT work!
+    s1.GetAverageTestScore() = 75;
+
+# Class definition elements
+
+A definition of a class is placed in a separate file, which has the extension .cs. 
+The class definition itself must contain:
+
+The "signature" of the class definition. The first line will contain the name of 
+the class; the rest of the definition (the body) must follow inside the area 
+delimited by { and }.
+
+    public class Student {
+        // Rest of class definition is here
+    }
+
+*Zero or more instance fields*. An instance field is a variable, which belong 
+specifically to an individual object. Each object of a given class will have its 
+own "set" of instance fields. Setting the values of the instance fields on one 
+object will not affect the values of the instance fields in another object.
+
+*One or more "public" methods*. The public methods are the methods that a user 
+of the class can invoke on the object. These mehtods fall in two categories: 
+Those that "ask a question" to the object (accessor), and those that may 
+change the state of the object (mutators). Note that a method definition is 
+also delimited by { and }. The collection of statements inside the delimiters 
+is called the *body* of the method.
+
+*Zero or more "private" methods*. The private methods are helper methods that 
+help the public methods complete their tasks. They are *not* available to an 
+external user.
+
+*One or more "constructors"*. A constructor is a special kind of method that is 
+invoked when the object is created. Its primary purpose is to ensure that the 
+object is created in a well-defined state, i.e. give the instance variables 
+well-defined values.
+
+# Instance Fields and State
+
+Class definition (part of):
+
+    public class Student {
+        private string name;
+        private int yearOfBirth;
+        private int testsTaken;
+        private bool isMale;
+    }
+
+The four lines between the { and the } define four *instance fields*, that are not 
+directly available for a user; this is indicated by the *private* keyword in front 
+of each definition. In Object-Oriented programming, an instance field is 
+typically made private, since an external user should *not* manipulate the values 
+of the instance fields directly, but rather do it indirectly by calling methods.
+
+All of the values for the instance fields define the *state* of a specific object. 
+Recall that state is indeed object-specific. Two different objects of the same class 
+will have the same set of instance fields, but the *values* of the instance fields may 
+be different:
+
+    State of one object: { “John”, 1988, 3 , True}
+    State of a different object: { “Susan”, 1984, 0, False}
+
+# Methods and Behavior
+
+Class definition (part of):
+
+    public class Student {
+        public void PrintName() {
+            Console.WriteLine(Name);
+        }
+
+        public void IncreaseTestsTaken(int NewTests) {
+            TestsTaken = TestsTaken + NewTests;
+        }
+
+        public int GetTestsTaken() {
+            return TestsTaken;
+        }
+
+        public bool IsStudentMale() {
+            return isMale;
+        }
+    }
+
+A method definition consists of
+
+  - Access specifier
+  - Return type
+  - Method name
+  - Parameters
+
+Some methods return information about the state of the object. This could simply be 
+the value of an instance field, or it could be a compund or calculated value.
+
+Note that when a method does not return any value, we indicate this by using the 
+*void* return value.
+
+Methods that return information are often called *accessors*, while methods that 
+change the state are called *mutators*.
+
+Some methods are neither accessors or mutators, but have some kind of "side effect",
+like printing something (not very common in back-end). Also, some methods may both 
+be an accessor and a mutator. Usually not recommended, since it may indicate too 
+many responsibilities for the method.
+
+Note that we use the keyword *public* to indicate that a method is available 
+to an external user. Only methods that an external user is intended use should 
+be marked public. A *private* method can only be used by other methods in the 
+class itself.
+
+Instance fields are usually *private*. We want to encapsulate the true 
+representation. Users do not need to know that represen-tation, and we 
+then can change it without affecting the user.
+
+Note that we can use *local variables* inside a method. They are used to 
+make caluclations easier, and are only “alive” while the method executes. 
+They *cannot* be accessed by other methods in the class, or by external users.
+
+# Class constructors
+
+A *constructor* is invoked when we create a new instance of a class, i.e. when 
+we create an object:
+
+    // We call a constructor without parameters
+    Student s1 = new Student();
+
+The primary purpose of the constructor is to set the state of the object to 
+something sensible and well-defined.
+
+In many cases, it will not make sense to create an object without having certain 
+information available, like name and birth for a Student. We would then use a 
+constructor with parameters:
+
+    // We call a constructor with parameters
+    Student s1 = new Student("Per", 1967, True);
+
+*We* define constructors! And we may define as many as we want; one without 
+parameters, and one (or more) with parameters. Note that if we do not define 
+any constructors at all, there will still exist a "default" constructor with
+zero parameters, that does nothing. This is usually not a recommended approach.
+
+In general, if it does not make sense to create an object without certain 
+information, the constructor should include parameters that represent this 
+information. This prevents that objects can be created without this information.
+
+Example of a constructor for the Student class:
+
+    public class Student {
+        public Student(string s_name, int s_yearOfBirth, bool s_isMale) {
+            name = s_name;
+            yearOfBirth = s_yearOfBirth;
+            isMale = s_isMale;
+            testsTaken = 0;
+        }
+
+        ... 
+        // Methods will follow here
+    }
+
+Note two very important features for a constructor:
+
+  - It looks like a method, but it always has the same name as the class itself
+  - It has no return type
+
+You can always recognise a constructor by these features.
+
+The statements inside the constructor do exactly what we stated before: set the 
+values of the instance fields to well-defined values. Some of these values are 
+given from the outside, in this case name, year of birth, and the gender indicator 
+(is male or not), while the number of tests taken is set to 0. The first three 
+values will thus be "individual" for each new object, while the last one will 
+*always* be set to 0 for all new Student objects. This is very typical; some initial 
+values are individual and require information from the caller, while other values
+have a sensible initial value which is the same for all objects of that class.
+
+Note also the names of the parameters in the constructor (s_ and then something).
+Why did we not just write the constructor like:
+
+    public Student(string name, int yearOfBirth, bool isMale) {
+        name = name;
+        yearOfBirth = yearOfBirth;
+        isMale = isMale;
+        testsTaken = 0;
+    }
+
+If we did this (it is actually legal syntax), then we suddenly have two things with the 
+same name: the instance field *name* and the parameter *name*. The program cannot 
+figure out that the left-hand side should be the instance field, while the right-hand 
+side should be the parameter. In this case, it will use the parameter on both sides, 
+which is not what we want.
+
+In order to solve this, we can do two things. We can use different names as in 
+the s_ example, or we can use the keyword this. That is very commonly used, and looks like:
+
+    public Student(string name, int yearOfBirth, bool isMale) {
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.isMale = isMale;
+        this.testsTaken = 0;
+    }
+
+The keyword *this* should be understood as "this specific object", so writing 
+this-dot-something will refer to elements inside this specific object, in this 
+case the instance fields. It is just a matter of taste if you prefer to use the 
+"different names for instance fields and parameters" approach, or the "using the
+this keyword" approach. The latter approach is however very common used in real 
+life, so you should know about it.
+
