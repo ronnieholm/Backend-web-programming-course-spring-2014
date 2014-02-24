@@ -4,7 +4,7 @@ The application contains several logic statements (eight cases in total).
 Note that the program does not print anything if you run it. 
  
 For each case, you should try to figure out what the final value 
-(true or false) of the variable in that case is. When ready, see the 
+(true or false) of the variable is. When ready, see the 
 result by uncommenting the statement that prints out the value 
 of the variable. 
 

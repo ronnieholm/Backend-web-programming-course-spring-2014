@@ -4,7 +4,7 @@ This exercise is only about observing how an existing class is used.
  
 Have a look inside the Car.cs file and see what the Car class 
 definition contains (constructors, methods, etc). See if you 
-can figure out what each method does – the comments for 
+can figure out what each method does. The comments for 
 each method should be helpful. 
   
 Observe how the Car class is used. Make sure you understand how:

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Exercises.Exercise7 {
-    /* make use of class from Main like so:
+    /* make use of class from Main method like so:
 
         Car myCar = new Car();
 

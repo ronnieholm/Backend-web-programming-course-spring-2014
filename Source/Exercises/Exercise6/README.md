@@ -1,7 +1,7 @@
 ﻿# Exercise 6: Logical expressions II
 
 Your task is to write a couple of logic statements. First, you must 
-declare two integer variables *a* and *b*, set *a* equal to 7, and set *b* 
+declare two integer variables *a* and *b*. Set *a* equal to 7, and set *b* 
 equal to 12. 
 
 Now write logical expressions for each of the cases below. That is, 

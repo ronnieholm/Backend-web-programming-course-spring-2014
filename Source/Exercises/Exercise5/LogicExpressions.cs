@@ -37,7 +37,7 @@ namespace Exercises.Exercise5 {
             bool bool6 = (x == y);
             // Console.WriteLine("The value of bool6 is : {0}", bool6);
             //
-            // Why did that happen!? Check the values for x and y
+            // Why did that happen? Check the values for x and y
             // by uncommenting the three lines below:
             //
             // Console.WriteLine("x is : {0}", x);
