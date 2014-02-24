@@ -13,4 +13,4 @@ much
 7. Set *g* equal to 35, then divide it with f 
  
 If you have forgotten how to print out the value of a variable, then 
-have a look at exercise 3 (or look in the Arithmetic project).
+have a look at exercise 3.

@@ -6,5 +6,8 @@ using System.Threading.Tasks;
 
 namespace Exercises.Exercise2 {
     class BankAccount {
+        string CardHolder = "John Doe";
+        string AccountNumber = "123456789";
+        // additional properties go here
     }
 }

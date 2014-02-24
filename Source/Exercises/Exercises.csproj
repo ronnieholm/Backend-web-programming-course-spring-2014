@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exercise1\Car.cs" />
+    <Compile Include="Exercise1\CarSolution.cs" />
     <Compile Include="Exercise2\BankAccount.cs" />
     <Compile Include="Exercise3\Arithmetics.cs" />
     <Compile Include="Exercise4\Arithmetics.cs" />
