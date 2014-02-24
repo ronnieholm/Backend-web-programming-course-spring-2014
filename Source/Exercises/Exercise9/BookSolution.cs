@@ -5,6 +5,30 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Exercises.Exercise9 {
+    class MyCode {
+        public void MyMain() {
+            // 2a
+            BookSolution b1 = new BookSolution("12345678", "SomeTitle", "SomeAuthor", 29.95);
+
+            // 2b
+            b1.PrintInformation();
+
+            // 2c
+            b1.BorrowFromLibrary();
+            b1.PrintInformation();
+
+            // 2d
+            b1.ReturnToLibrary();
+            b1.PrintInformation();
+
+            // 4
+            BookSolution b2 = new BookSolution("23456789", "SomeTitle", "SomeAuthor", 9.95);
+            b2.PrintInformation();
+            b2.BorrowFromLibrary();
+            b2.PrintInformation(); 
+        }
+    }
+
     class BookSolution {
         // Instance fields
         private string isbnCode;
@@ -13,6 +37,9 @@ namespace Exercises.Exercise9 {
         private double price;
         private bool bookIsLoanedOut;
 
+        // 3a
+        private int numberOfLoans;
+
         // Constructor
         public BookSolution(string isbnCode, string title, string author, double price) {
             this.isbnCode = isbnCode;
@@ -20,9 +47,12 @@ namespace Exercises.Exercise9 {
             this.author = author;
             this.price = price;
             this.bookIsLoanedOut = false;
+
+            // 3b
+            this.numberOfLoans = 0;
         }
 
-        // Just some standard Get.. methods
+        // Just some standard Get methods
         public string GetIsbnCode() {
             return isbnCode;
         }
@@ -48,6 +78,14 @@ namespace Exercises.Exercise9 {
         // loans the book from the library and returns the book to the library.
         public void BorrowFromLibrary() {
             bookIsLoanedOut = true;
+
+            // 3c
+            numberOfLoans++;
+        }
+
+        // 3d
+        public int GetNumberOfLoans() {
+            return numberOfLoans;
         }
 
         public void ReturnToLibrary() {
@@ -56,7 +94,8 @@ namespace Exercises.Exercise9 {
 
         // Prints out complete information about the book
         public void PrintInformation() {
-            Console.WriteLine("ISBN {0} : {1}, by {2}  (price {3})", isbnCode, title, author, price);
+            // 3e
+            Console.WriteLine("ISBN {0} : {1}, by {2}  (price {3}) {4}", isbnCode, title, author, price, numberOfLoans);
             Console.WriteLine();
         }
 

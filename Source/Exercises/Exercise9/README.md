@@ -22,7 +22,7 @@ method you can call for that, remember?)
 number of times a book has been borrowed. To do this, you 
 must add code to the Book class. More specifically, you need 
 to:  
-(a) Add a new instance field numberOf Loans to store the 
+(a) Add a new instance field numberOfLoans to store the 
 number of times a book has been borrowed (what 
 would be a good type to use for this field?) 
 (b) Update the constructor to give this instance field an 

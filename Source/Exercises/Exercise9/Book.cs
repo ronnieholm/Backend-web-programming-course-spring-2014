@@ -22,7 +22,7 @@ namespace Exercises.Exercise9 {
             this.bookIsLoanedOut = false;
         }
 
-        // Just some standard Get.. methods
+        // Just some standard Get methods
         public string GetIsbnCode() {
             return isbnCode;
         }
