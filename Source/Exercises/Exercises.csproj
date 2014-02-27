@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exercise10\DiceCup.cs" />
+    <Compile Include="Exercise10\DiceCupSolution.cs" />
     <Compile Include="Exercise10\Die.cs" />
     <Compile Include="Exercise1\Car.cs" />
     <Compile Include="Exercise1\CarSolution.cs" />
