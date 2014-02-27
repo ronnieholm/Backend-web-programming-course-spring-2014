@@ -8,7 +8,7 @@ using Exercises.Exercise9b;
 namespace Exercises {
     class Program {
         static void Main(string[] args) {
-            // Console.WriteLine("Set me to the correct project");
+            // it sConsole.WriteLine("Set me to the correct project");
 
             MyCode c = new MyCode();
             c.MyMain();
