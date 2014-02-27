@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exercise10\DiceCup.cs" />
+    <Compile Include="Exercise10\Die.cs" />
     <Compile Include="Exercise1\Car.cs" />
     <Compile Include="Exercise1\CarSolution.cs" />
     <Compile Include="Exercise2\BankAccount.cs" />
@@ -64,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Exercise10\README.md" />
     <None Include="Exercise1\README.md" />
     <None Include="Exercise2\README.md" />
     <None Include="Exercise3\README.md" />
