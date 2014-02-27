@@ -8,10 +8,11 @@ a new class called Status in the file Status.cs.
    the constructor, the methods that return information (accessors), 
    and the methods that change the value of an instance field (mutators)
 2. Now try to use the Status class yourself. Insert some code into the 
-   solution (in InsertCodeHere.cs), that does the following:
-a. Creates a new Status object.
-b. Prints out some information about the Status object: The status text, the number of likes, and the number of dislikes. In order to do this, you need to call some method on the Status object.
-c. Makes some calls of the methods which change the number of likes and dislikes.
+   solution (in InsertCodeHere.cs), that does the following: (a) Creates a 
+   new Status object, (b) Prints out some information about the Status object: 
+   The status text, the number of likes, and the number of dislikes. In 
+   order to do this, you need to call some method on the Status object.
+2c. Makes some calls of the methods which change the number of likes and dislikes.
 d. Prints out the information again – now you should see that the information has changed
 3. After this, we decide that we want to keep track of the number of times the status has been read. To do this, we need to add code to the Status class. More specifically, you need to:
 a. Add a new instance field numberOf Reads to store the number of times a status has been read
