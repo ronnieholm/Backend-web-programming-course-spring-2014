@@ -28,6 +28,6 @@ Given these requirement, your tasks are:
 3. If you have time left, try to extend the class definition with methods 
    for adding interest to the account. It is up to you to define requirements, etc.
 
-NOTE: This is a fairly large and somewhat difficult exercise. Try to solve it 
+Note: This is a fairly large and somewhat difficult exercise. Try to solve it 
 in small steps. Get a little bit to work, test it, and then proceed to the next 
 little bit. Manage the complexity.  
