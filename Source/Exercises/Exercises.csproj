@@ -42,12 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exercise10\DiceCup.cs" />
-    <Compile Include="Exercise10\DiceCupSolution.cs" />
     <Compile Include="Exercise10\Die.cs" />
     <Compile Include="Exercise11\BankAccount.cs" />
-    <Compile Include="Exercise11\BankAccountSolution.cs" />
     <Compile Include="Exercise12\Geometry.cs" />
-    <Compile Include="Exercise12\GeometrySolution.cs" />
     <Compile Include="Exercise1\Car.cs" />
     <Compile Include="Exercise1\CarSolution.cs" />
     <Compile Include="Exercise2\BankAccount.cs" />
@@ -59,11 +56,8 @@
     <Compile Include="Exercise8\Student.cs" />
     <Compile Include="Exercise8\StudentSolution.cs" />
     <Compile Include="Exercise9a\Status.cs" />
-    <Compile Include="Exercise9a\StatusSolution.cs" />
     <Compile Include="Exercise9b\FruitBox.cs" />
-    <Compile Include="Exercise9b\FruitBoxSolution.cs" />
     <Compile Include="Exercise9\Book.cs" />
-    <Compile Include="Exercise9\BookSolution.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />
     <Compile Include="NC2FindOldestPerson\Solution.cs" />
     <Compile Include="Program.cs" />

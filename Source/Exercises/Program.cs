@@ -10,8 +10,8 @@ namespace Exercises {
         static void Main(string[] args) {
             // Console.WriteLine("Set me to the correct project");
 
-            MyCode c = new MyCode();
-            c.MyMain();
+            //MyCode c = new MyCode();
+            //c.MyMain();
         }
     }
 }
