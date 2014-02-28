@@ -2,7 +2,7 @@
 
 This exercise is about using an existing class. The solution contains 
 a new class called Student in the file Student.cs. 
- 
+
 1. Have a look inside the Student.cs file and see what the 
 Student class definition contains (constructors, methods, 
 etc). See if you can figure out what each method does. The 
