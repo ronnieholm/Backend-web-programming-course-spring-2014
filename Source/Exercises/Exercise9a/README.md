@@ -25,5 +25,5 @@ a new class called Status in the file Status.cs.
    value of the new instance field, (e) Update your test code, so the new methods 
    are tested as well.
 4. [Extra – only if you have time] Add a method ReadStatusMultiple that will 
-increase the number of times the status has been read with a number given by 
-the user (Hint: the method will then need to take this number as a parameter).
+   increase the number of times the status has been read with a number given by 
+   the user (Hint: the method will then need to take this number as a parameter).
