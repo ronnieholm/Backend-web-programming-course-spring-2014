@@ -65,4 +65,19 @@ Classes are Friday 9.00am-1.30pm
 	  <td></td>
 	  <td>7, 8, 9, 9a, 9b, 10, 11, 12</td>
 	</tr>
+	<tr>
+	  <td>12</td>
+	  <td>
+		<p>Conditional statements</p>
+		<p>if-statement</p>
+		<p>if/else-statement</p>
+		<p>switch statement</p>
+	  </td>
+	  <td>
+	    <p><a href="LectureNotes.md">Lecture notes</a></p>
+		<p><a href="Syllabus.md">Syllabus</a></p>
+      </td>
+	  <td></td>
+	  <td>13, 14, 15, 16</td>
+	</tr>
   </table>
