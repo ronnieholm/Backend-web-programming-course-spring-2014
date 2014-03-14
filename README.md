@@ -15,7 +15,6 @@ Classes are Friday 9.00am-1.30pm
 	  <th>Material</th>
 	  <th>Projects</th>
 	  <th>Exercises</th>
-	  <th>Solved exercises</th>
     </tr>
 	<tr>
 	  <td>6</td>
@@ -33,7 +32,6 @@ Classes are Friday 9.00am-1.30pm
       </td>
 	  <td></td>
 	  <td>NC1, NC2</td>
-	  <td>NC1, NC2</td>
 	</tr>
 	<tr>
 	  <td>7</td>
@@ -50,7 +48,6 @@ Classes are Friday 9.00am-1.30pm
       </td>
 	  <td></td>
 	  <td>1, 2, 3, 4, 5, 6</td>
-	  <td></td>
 	</tr>
 	<tr>
 	  <td>8-11</td>
@@ -67,6 +64,5 @@ Classes are Friday 9.00am-1.30pm
       </td>
 	  <td></td>
 	  <td>7, 8, 9, 9a, 9b, 10, 11, 12</td>
-	  <td></td>
 	</tr>
   </table>
