@@ -112,7 +112,7 @@ Classes are Friday 9.00am-1.30pm
 	  <td>21, 22, 23, 24, 25</td>
 	</tr>
 	<tr>
-	  <td>15</td>
+	  <td>15-16</td>
 	  <td>
 		<p>Combining classes</p>
 		<p>Inheritance</p>
@@ -125,5 +125,22 @@ Classes are Friday 9.00am-1.30pm
       </td>
 	  <td></td>
 	  <td>The Bank Job, 26, 27</td>
+	</tr>
+	<tr>
+	  <td>17-20</td>
+	  <td>
+		<p>Error handling, "bit & pieces"</p>
+		<p>Defensive programming</p>
+		<p>Exceptions</p>
+		<p>Constants</p>
+		<p>Static classes and methods</p>
+		<p>Enumeration types</p>
+	  </td>
+	  <td>
+	    <p><a href="LectureNotes.md">Lecture notes</a></p>
+		<p><a href="Syllabus.md">Syllabus</a></p>
+      </td>
+	  <td></td>
+	  <td>29, 30, 31</td>
 	</tr>
   </table>
