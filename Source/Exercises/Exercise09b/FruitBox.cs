@@ -16,6 +16,9 @@ namespace Exercises.Exercise09b {
             Console.WriteLine(output1);
             double price = b1.GetTotalPrice();
             Console.WriteLine(price);
+
+            FruitBox b2 = new FruitBox(100, 200);
+            //
         }
     }
 

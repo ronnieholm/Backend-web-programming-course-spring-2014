@@ -80,4 +80,19 @@ Classes are Friday 9.00am-1.30pm
 	  <td></td>
 	  <td>13, 14, 15, 16</td>
 	</tr>
+	<tr>
+	  <td>13</td>
+	  <td>
+		<p>Repetition statements</p>
+		<p>while-loop</p>
+		<p>if/else-statement</p>
+		<p>for-loop</p>
+	  </td>
+	  <td>
+	    <p><a href="LectureNotes.md">Lecture notes</a></p>
+		<p><a href="Syllabus.md">Syllabus</a></p>
+      </td>
+	  <td></td>
+	  <td>17, 18, 18a, 18b, 19, 19a, 20</td>
+	</tr>
   </table>
