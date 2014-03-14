@@ -53,7 +53,7 @@ Classes are Friday 9.00am-1.30pm
 	  <td></td>
 	</tr>
 	<tr>
-	  <td>8-9</td>
+	  <td>8-11</td>
 	  <td>
 		<p>Using classes and objects</p>
 		<p>Creating objects</p>
