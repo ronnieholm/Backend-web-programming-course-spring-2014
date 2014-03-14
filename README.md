@@ -95,4 +95,20 @@ Classes are Friday 9.00am-1.30pm
 	  <td></td>
 	  <td>17, 18, 18a, 18b, 19, 19a, 20</td>
 	</tr>
+	<!-- skipped the C# programming project #1 -->
+	<tr>
+	  <td>14</td>
+	  <td>
+		<p>Data structures</p>
+		<p>Array and  foreach-loop</p>
+		<p>List</p>
+		<p>Dictionary</p>
+	  </td>
+	  <td>
+	    <p><a href="LectureNotes.md">Lecture notes</a></p>
+		<p><a href="Syllabus.md">Syllabus</a></p>
+      </td>
+	  <td></td>
+	  <td>21, 22, 23, 24, 25</td>
+	</tr>
   </table>
