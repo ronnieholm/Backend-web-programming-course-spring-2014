@@ -111,4 +111,19 @@ Classes are Friday 9.00am-1.30pm
 	  <td></td>
 	  <td>21, 22, 23, 24, 25</td>
 	</tr>
+	<tr>
+	  <td>15</td>
+	  <td>
+		<p>Combining classes</p>
+		<p>Inheritance</p>
+		<p>Polymorphism</p>
+		<p>Interfaces</p>
+	  </td>
+	  <td>
+	    <p><a href="LectureNotes.md">Lecture notes</a></p>
+		<p><a href="Syllabus.md">Syllabus</a></p>
+      </td>
+	  <td></td>
+	  <td>The Bank Job, 26, 27</td>
+	</tr>
   </table>
