@@ -64,6 +64,7 @@
     <Compile Include="Exercise09\Book.cs" />
     <Compile Include="Exercise09\BookSolution.cs" />
     <Compile Include="Exercise12\GeometrySolution.cs" />
+    <Compile Include="Exercise13\Car.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />
     <Compile Include="NC2FindOldestPerson\Solution.cs" />
     <Compile Include="Program.cs" />
@@ -85,6 +86,10 @@
     <None Include="Exercise09a\README.md" />
     <None Include="Exercise09b\README.md" />
     <None Include="Exercise09\README.md" />
+    <None Include="Exercise13\README.md" />
+    <None Include="Exercise14\README.md" />
+    <None Include="Exercise15\README.md" />
+    <None Include="Exercise16\README.md" />
     <None Include="NC1CalculateChange\README.md" />
     <None Include="NC2FindOldestPerson\README.md" />
   </ItemGroup>
