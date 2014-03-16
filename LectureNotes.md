@@ -1148,8 +1148,11 @@ Often you will have more than two possible alternatives. For instances translati
 of scores to grades:
 
 If score is above 90, grade is A
+
 If score is above 75, grade is B
+
 If score is above 55, grade is C
+
 If none of the above, grade is D
 
 This can be written as a nested if/else-statement:
@@ -1191,10 +1194,14 @@ for each possible specific value of a variable.
 Maybe the logic for calculating child support could be like this:
 
 0 children amounts to 0 kr. of child support per month
+
 1 child amounts to 1,200 kr. of child support per month
+
 2 children amounts to 2,000 kr. of child support per month
+
 3 children amounts to 2,600 kr. of child support per month
-> 3 children amounts to 3,000 kr. of child support per month
+
+more than 3 children amounts to 3,000 kr. of child support per month
 
 There is no simple formula for this dependency so we could write it as a 
 nested or multi *if/else*-statement. However, the switch-statement allows us 
