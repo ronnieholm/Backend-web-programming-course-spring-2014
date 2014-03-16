@@ -1009,3 +1009,234 @@ case the instance fields. It is just a matter of taste if you prefer to use the
 this keyword" approach. The latter approach is however very common used in real 
 life, so you should know about it.
 
+# Handling conditions
+
+So far, we can only define "deterministic" sequences of statements that will 
+always be executed in the same order. This sets significant constraints on 
+the complexity of code we can write.
+
+To create more complex code, we also need statements that control the "flow" 
+of other statements. That is, the order in which other statements are executed.
+
+These statements are called "control statements". The main types of control 
+statements are:
+
+  - Conditional statements
+  - Repetition statements
+
+In the category of conditional statements, the if-statement is the most 
+prominent member.
+
+Other conditional statements:
+
+  - if/else-statement
+  - Switch-statement
+
+## The if-statement
+
+The business logic we are trying to implement will very often contain *conditions*.
+
+Examples:
+
+  - Only allow withdrawal from a bank account *if* the balance is larger than 
+    the amount to withdraw
+  - A car is defined as being a family car *if* it has at least four seats 
+    *and* has air conditioning
+
+The C# syntax for a conditional statement is:
+
+    if (condition) {
+        // sequence of statements
+    }
+
+Three elements in an if-statement:
+
+  1. The keyword if
+  2. The logical condition (which is a boolean expression) inside the brackets
+  3. The code block inside the { and }
+
+Remember that a boolean (or logical) expression will always evaluate to 
+true or false. The expression can be simple or very complex, but it must 
+always evaluate to either true or false.
+
+How will the *withdraw* method from the *BankAccount* class look, if we add 
+the condition that the balance must be larger than or equal to the amount 
+we are trying to withdraw?
+
+    if (balance >= amount) {
+        balance = balance – amount;
+    }
+
+It is very important to understand the main propertiers of the if-statement
+
+  - If the condition evaluates to *true*, the code inside the code block 
+    will be executed *once* and the program will then continue with 
+	the statements following the if-statement
+  - If the condition evaluates to *false*, the code inside the code block 
+    will be skipped (i.e. *not* executed), and the program will immediately 
+	continue with the statements following the if-statement
+
+If the code block only consists of one line, it is possible to write the code 
+like this:
+
+    if (balance >= amount)
+        balance = balance – amount;
+
+For readability, and to avoid bugs in the program, it is however recommended 
+always to use the { and } to delimit the code block.
+
+Watch out: Do *not* put a semicolon right after the condition. This is an 
+error, but not a syntax error. The if-statement will then "do nothing" no 
+matter the value of the condition.
+
+## The if/else statement
+
+In many situations there will also be a natural alternative action if the 
+condition evaluates to false.
+
+We could write this as:
+
+    if (balance >= amount) {
+        balance = balance – amount;
+    }
+    if (balance < amount) {
+        Console.Writeline(“ERROR!!”);
+    }
+
+This is possible but somewhat dangerous. Can we be absolutely sure that 
+the two conditions are mutually exclusive, and that one will always be executed?
+
+It is more convenient (and safe) to include the alternative as an integrated part 
+of the if-statement itself by adding an else-part to the statement:
+
+    if (balance >= amount) {
+        balance = balance – amount;
+    } else {
+        Console.Writeline("Error");
+    }
+
+This is a safer approach; we are guaranteed that *exactly* one of the statements 
+is always executed. Never none, never both.
+
+## Nested if-statement
+
+It is also possible to "nest" if-statements within each other. We could have a 
+condition like:
+
+    if ((age >= 18) && (nationality == "Danish")) {
+        Console.Writeline("You can vote");
+    }
+
+This is perfectly legal but could also be written as:
+
+    if (age >= 18) {
+        if (nationality == "Danish") {
+            Console.Writeline(“You can vote!”);
+        }
+    }
+
+Notice the indentation. It makes the code easier to read.
+
+In general the code block can contain any code you want, like additional 
+conditional statements as above. Watch out for very complex combinations.
+
+You can, of course, also nest if/else-statements.
+
+## Multi if/else-statements
+
+Often you will have more than two possible alternatives. For instances translation 
+of scores to grades:
+
+If score is above 90, grade is A
+If score is above 75, grade is B
+If score is above 55, grade is C
+If none of the above, grade is D
+
+This can be written as a nested if/else-statement:
+
+    if (score > 90) {
+        grade = "A";
+    } else {
+        if (score > 75) {
+            grade = "B";
+        } else {
+            if (score > 55) {
+                grade = "C";
+            } else {
+                grade = "D";
+            }
+        }
+    }
+
+An alternative way of writing this is:
+
+    if (score > 90) {
+        grade = "A";
+    } else if (score > 70) {
+        grade = "B";
+    } else if (score > 55) {
+        grade = "C";
+    } else {
+        grade = "D";
+    }
+
+They are logically equivalent but the latter can be easier to read. Mostly a 
+matter of style and preferences.
+
+## Switch-statements
+
+Sometimes the business logic has a nature where there is a distinct outcome 
+for each possible specific value of a variable.
+
+Maybe the logic for calculating child support could be like this:
+
+0 children amounts to 0 kr. of child support per month
+1 child amounts to 1,200 kr. of child support per month
+2 children amounts to 2,000 kr. of child support per month
+3 children amounts to 2,600 kr. of child support per month
+> 3 children amounts to 3,000 kr. of child support per month
+
+There is no simple formula for this dependency so we could write it as a 
+nested or multi *if/else*-statement. However, the switch-statement allows us 
+to "directly" choose an alternative based on a specific value:
+
+    switch (noOfChildren) {
+        case 0:
+            childSupport = 0;
+            break;
+        case 1:
+            childSupport = 1200;
+            break;
+        case 2:
+            childSupport = 2000;
+            break;
+        case 3:
+            childSupport = 2600;
+            break;
+        default:
+            childSupport = 3000;
+            break;
+    }
+
+There are several important properties to note about the *switch*-statement:
+
+  - At the outermost level, we use the keyword *switch* followed by the 
+    expression (typically just a variable) that we "switch" on in brackets ().
+  - We write a *case* statement for each of the cases that we wish to handle 
+    individually, using the keyword case followed by the actual value, followed 
+	by ":" (colon, not semicolon).
+  - Each case contains a sequence of statements, concluded by a *break* statement. 
+    The break statement indicates that no more of the code within the case 
+	statement should be executed. It is perfectly legal to include if-statements, 
+	etc. in the code before the break statement, but often you will put just a 
+	single line of code.
+  - If the value is not handled explicitly by a matching case statement, it is 
+    caught in the *default* statement and the lines of code specified here are 
+	executed.
+
+Again, there is nothing you can do in a *switch*-statement that you cannot do 
+in a *if*-statement. They are logically equivalent.
+
+Choose the type of statement that you feel fits the problem best, and makes the
+code easier to understand.
+
