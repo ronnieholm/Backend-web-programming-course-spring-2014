@@ -65,6 +65,8 @@
     <Compile Include="Exercise09\BookSolution.cs" />
     <Compile Include="Exercise12\GeometrySolution.cs" />
     <Compile Include="Exercise13\Car.cs" />
+    <Compile Include="Exercise14\BankAccount.cs" />
+    <Compile Include="Exercise14\BankAccountSolution.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />
     <Compile Include="NC2FindOldestPerson\Solution.cs" />
     <Compile Include="Program.cs" />

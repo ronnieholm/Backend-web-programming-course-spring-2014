@@ -2,7 +2,7 @@
 
 This project contains a working BankAccount class. However, it has some problems.
 
-1. Try to test the *BankAccount* class by adding code in the InsertCodeHere class. 
+1. Try to test the *BankAccount* class by adding code in the usual runner class. 
    Specifically, make some tests that make the balance go negative.
 2. Now change the code in the *Withdraw* method such that a withdrawal is only 
    done if the balance is larger than or equal to the given amount. Remember 
