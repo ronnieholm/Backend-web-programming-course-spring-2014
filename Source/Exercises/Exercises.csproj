@@ -69,6 +69,8 @@
     <Compile Include="Exercise14\BankAccountSolution.cs" />
     <Compile Include="Exercise15\MysticNumbersSolution.cs" />
     <Compile Include="Exercise15\MysticNumbers.cs" />
+    <Compile Include="Exercise16\BodyAnalyzer.cs" />
+    <Compile Include="Exercise16\BodyAnalyzerSolution.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />
     <Compile Include="NC2FindOldestPerson\Solution.cs" />
     <Compile Include="Program.cs" />
