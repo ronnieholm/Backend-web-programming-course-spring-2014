@@ -15,7 +15,7 @@ For each of these methods:
   1. For each of these three methods, make sure you understand what the 
      possible return values are and under what circumstances each value 
 	 can be returned.
-  2. Read the code in InsertCodeHere.cs – it tests the Car class. Before 
+  2. Read the code at the top of Car.cs. It tests the Car class. Before 
      running the program, try to predict the outcome.
   3. Run the program and check that the outcome is as you predicted. If not,
      you may need to read the Car class code again.
