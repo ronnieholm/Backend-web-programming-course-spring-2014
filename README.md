@@ -85,7 +85,6 @@ Classes are Friday 9.00am-1.30pm
 	  <td>
 		<p>Repetition statements</p>
 		<p>while-loop</p>
-		<p>if/else-statement</p>
 		<p>for-loop</p>
 	  </td>
 	  <td>
