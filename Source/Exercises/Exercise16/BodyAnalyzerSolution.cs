@@ -31,19 +31,19 @@ namespace Exercises.Exercise16 {
             string analysis = "Your BMI is : " + bmi + ", ";
 
             if (bmi < 15) {
-                analysis = analysis + "you are way too skinny!";
+                analysis += "You are way too skinny!";
             }
             else if (bmi >= 15 && bmi <= 22) {
-                analysis = analysis + "you are a bit skinny";
+                analysis += "You are a bit skinny";
             }
             else if (bmi > 22 && bmi <= 28) {
-                analysis = analysis + "you are just fine!";
+                analysis += "You are just fine!";
             }
             else if (bmi > 28 && bmi <= 35) {
-                analysis = analysis + "you are a bit overweight!";
+                analysis += "You are a bit overweight!";
             }
             else {
-                analysis = analysis + "you are way too fat!";
+                analysis += "You are way too fat!";
             }
 
             return analysis;
