@@ -1247,3 +1247,136 @@ in a *if*-statement. They are logically equivalent.
 Choose the type of statement that you feel fits the problem best, and makes the
 code easier to understand.
 
+# Handling repetition
+
+The *if* statement allows some control of execution flow but we still cannot 
+easily repeat a block of statements.
+
+In practice, we very often need to *repeat* a block of code multiple times 
+while some condition is true. For that purpose we have *loop statements*,
+aka. *repetition statements*.
+
+Types of repetition statements:
+
+  - While-statement
+  - For-statement
+  - Foreach-statement
+
+The *foreach*-statement is closely related to *collections* so we only look 
+at while and for-statement for now.
+
+## The while-loop
+
+The basic structure of the *while*-loop:
+
+    while (condition) {
+        // code block
+    }
+
+The code block can contain any C# code, including other control statements 
+(code nesting).
+
+The condition is the same type as we saw for *if*-statements: a logical 
+condition that evaluates to *true* or *false*.
+
+If the condition is true, the statements in the code block are executed once. 
+This is called an *iteration*.
+
+After an iteration, the condition is checked again. If it is still true, 
+another iteration is performed. If it is false, the code block is skipped
+and the statements after the *while*-statement are executed.
+
+How can the value of the condition change? The value of the condition is 
+evaluated after *each* execution of the code block so some of the statements 
+in the code block must affect the value of the condition.
+
+If no action in the code body can affect the condition we have an infinite loop.
+
+Typical variants of *while*-loops:
+
+### Counter-controlled while-loop
+
+    int counter = 1;
+    while (counter < 10) {
+        // do something
+        counter = counter + 1;
+    }
+
+Appropriate when we wish to repeat the code a fixed (either at compile-time or 
+at run-time) number of times.
+
+### Sentinel-controlled while-loop
+
+    int grade = GetGradeFromUser();
+    while (grade >= 0) {
+        // do something
+        grade = GetGradeFromUser();
+    }
+
+Appropriate when some external source (e.g., the user) controls how many times we 
+need to execute the code. Execution stops when the user inputs a certain *flag value*.
+
+NB: A flag value must *not* also be a valid data value.
+
+Note that four properties are common for both types of loops:
+
+  1. *Initialisation*: Before the loop itself is entered we usually, but not always, 
+     initialize some variable that is also used as part of the condition.
+  2. *Condition*: The logical condition itself which is evaluated before performing 
+     another iteration of the loop.
+  3. *Change*: Since the condition itself is fixed, at least one of the values of the 
+     variables in the condition must have the chance to change during an iteration. 
+	 Otherwise, we have an infinite loop. Formally speaking, the probability that 
+	 something changes must be larger than 0 (zero).
+  4. *Code block*: The sets of statements that are executed during an iteration. Some of 
+     those statements must cause the change mentioned above.
+
+## The for-loop
+
+As mentioned above a counter-controlled while-loop has four components:
+
+    int counter = 1; // Initialisation
+    while (counter < 10) // Condition {
+		// code block (do something)
+        counter = counter + 1; // Change
+    }
+
+This construction is so commonly used that another repetition statement, the *for*-loop, is 
+available for this purpose. This is the generic structure of the for-loop:
+
+    for (initialisation; condition; change) {
+        // code block
+    }
+
+A typical *for*-loop:
+
+    for (int counter = 1; counter <= 10; counter++) {
+        // code block
+    }
+
+Note that counter++ means "increase the value of the variable counter by one".
+
+Advantages of the for-loop:
+
+  - Statement "header" takes care of "all"
+  - Harder to forget, e.g., the change statement
+
+Except for some very special cases, *for*-loops and *while*-loops are equivalent. You 
+can write any repetition statement as either a *for*-loop or a *while*-loop. 
+
+However, using *for*-loops in the case of counter controlled repetitions is the common 
+recommendation.
+
+Legal, but not advisable:
+
+    for (int grade = getGradeFromUser();
+         grade >= 0;
+         grade = getGradeFromUser()) {
+         // do something...
+    }
+
+In general:
+  
+  - Use for-loops for counter-controlled repetitions
+  - Use while-loops for sentinel-controlled repetitions
+
