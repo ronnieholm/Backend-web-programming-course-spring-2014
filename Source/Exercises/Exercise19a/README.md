@@ -18,8 +18,8 @@ Shape B (5 stars in a row, separated by spaces).
 * * * * * 
 
 Shape C (10 rows of 10 stars each).
-**********
-**********
+********** (1)
+********** (2)
 **********
 **********
 **********
