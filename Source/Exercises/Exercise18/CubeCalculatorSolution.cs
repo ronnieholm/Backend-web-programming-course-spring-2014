@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 namespace Exercises.Exercise18 {
     class SolutionRunner {
         public void Run() {
-            CubeCalculator cc = new CubeCalculator();
-            string userInput = cc.GetUserInput("Please enter an integer number (or q for quit):");
+            CubeCalculatorSolution cc = new CubeCalculatorSolution();
 
-            while (userInput != "q") {
+            string userInput = "";
+            do {
+                userInput = cc.GetUserInput("Please enter a number (or q for quit): ");
                 if (cc.IsANumber(userInput)) {
                     int value = cc.ConvertToNumber(userInput);
                     int result = cc.CalculateCube(value);
@@ -19,8 +20,7 @@ namespace Exercises.Exercise18 {
                 else {
                     Console.WriteLine("Could not calculate");
                 }
-                userInput = cc.GetUserInput("Please enter a number (or q for quit): ");
-            }
+            } while (userInput != "q");
         }
     }
 

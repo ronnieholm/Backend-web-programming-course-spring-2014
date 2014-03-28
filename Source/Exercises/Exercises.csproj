@@ -83,6 +83,8 @@
     <Compile Include="Exercise18b\SolutionRunner.cs" />
     <Compile Include="Exercise18\CubeCalculator.cs" />
     <Compile Include="Exercise18\CubeCalculatorSolution.cs" />
+    <Compile Include="Exercise19a\DrawingTool.cs" />
+    <Compile Include="Exercise19a\DrawingToolSolution.cs" />
     <Compile Include="Exercise19\ForLoops.cs" />
     <Compile Include="Exercise19\ForLoopsSolution.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />

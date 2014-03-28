@@ -1,4 +1,4 @@
-﻿# Exercise 17: While loops 1
+﻿# Exercise 17: Counter-controlled while loops
 
 This exercise is about observing how a few counter-controlled while-loops work 
 and then try to code a few on your own.

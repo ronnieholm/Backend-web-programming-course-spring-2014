@@ -1,4 +1,4 @@
-﻿# Exercise 18: While loops 2
+﻿# Exercise 18: Sentinel-controlled while loops
 
 This exercise is about implementing a sentinel-controlled while-statement yourself
 

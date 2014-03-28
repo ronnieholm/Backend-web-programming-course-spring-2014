@@ -9,7 +9,7 @@ namespace Exercises.Exercise18 {
         public void Run() {
             CubeCalculator cc = new CubeCalculator();
 
-            String userInput = cc.GetUserInput("Please enter an integer number:");
+            string userInput = cc.GetUserInput("Please enter an integer number:");
             if (cc.IsANumber(userInput)) {
                 int value = cc.ConvertToNumber(userInput);
                 int result = cc.CalculateCube(value);
@@ -23,7 +23,7 @@ namespace Exercises.Exercise18 {
 
     class CubeCalculator {
         // reads the user's input from the console
-        public String GetUserInput(String helpText) {
+        public string GetUserInput(string helpText) {
             Console.Write(helpText + " ");
             string userInput = Console.ReadLine();
             return userInput;

@@ -8,12 +8,47 @@ is provided to help with this.
      there any good reason to have such a class at all?
   2. Using for-loops and the DrawingTool class, see if you can draw the 
      following five simple shapes on the screen (they do become harder 
-	 and harder, tough). Just write the code in InsertCodeHere.cs as 
-	 usual.
+	 and harder, though). Create the usual Runner class and enter code
+	 there as usual.
 
 Shape A (10 stars in a row).
-Shape B (5 stars in a row, separated by spaces).
-Shape C (10 rows of 10 stars each).
-Shape D (So, what is this then…?).
-Shape E (A big "X", I guess…?).
+**********
 
+Shape B (5 stars in a row, separated by spaces).
+* * * * * 
+
+Shape C (10 rows of 10 stars each).
+**********
+**********
+**********
+**********
+**********
+**********
+**********
+**********
+**********
+**********
+
+Shape D (So, what is this then?).
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+
+Shape E (A big "X", I guess?).
+*        *
+ *      *
+  *    *
+   *  *
+    **
+	**
+   *  *
+  *    *
+ *      *
+*        *
