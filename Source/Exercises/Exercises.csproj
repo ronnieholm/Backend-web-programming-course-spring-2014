@@ -71,6 +71,20 @@
     <Compile Include="Exercise15\MysticNumbers.cs" />
     <Compile Include="Exercise16\BodyAnalyzer.cs" />
     <Compile Include="Exercise16\BodyAnalyzerSolution.cs" />
+    <Compile Include="Exercise17\WhileLoopsSolution.cs" />
+    <Compile Include="Exercise17\WhileLoops.cs" />
+    <Compile Include="Exercise18a\CorrectChangeSolution.cs" />
+    <Compile Include="Exercise18a\CorrectChange.cs" />
+    <Compile Include="Exercise18b\BattleLog.cs" />
+    <Compile Include="Exercise18b\Beast.cs" />
+    <Compile Include="Exercise18b\Hero.cs" />
+    <Compile Include="Exercise18b\NumberGenerator.cs" />
+    <Compile Include="Exercise18b\Runner.cs" />
+    <Compile Include="Exercise18b\RunnerSolution.cs" />
+    <Compile Include="Exercise18\CubeCalculator.cs" />
+    <Compile Include="Exercise18\CubeCalculatorSolution.cs" />
+    <Compile Include="Exercise19\ForLoops.cs" />
+    <Compile Include="Exercise19\ForLoopsSolution.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />
     <Compile Include="NC2FindOldestPerson\Solution.cs" />
     <Compile Include="Program.cs" />
@@ -96,10 +110,18 @@
     <None Include="Exercise14\README.md" />
     <None Include="Exercise15\README.md" />
     <None Include="Exercise16\README.md" />
+    <None Include="Exercise17\README.md" />
+    <None Include="Exercise18a\README.md" />
+    <None Include="Exercise18b\README.md" />
+    <None Include="Exercise18\README.md" />
+    <None Include="Exercise19a\README.md" />
+    <None Include="Exercise19\README.md" />
     <None Include="NC1CalculateChange\README.md" />
     <None Include="NC2FindOldestPerson\README.md" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Exercise20\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

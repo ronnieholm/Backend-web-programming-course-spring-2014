@@ -32,6 +32,7 @@ namespace Exercises.Exercise16 {
 
             if (bmi < 15) {
                 analysis += "You are way too skinny!";
+                analysis = analysis + "You ...";
             }
             else if (bmi >= 15 && bmi <= 22) {
                 analysis += "You are a bit skinny";
