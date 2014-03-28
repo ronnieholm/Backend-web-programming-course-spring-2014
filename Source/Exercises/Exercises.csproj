@@ -80,7 +80,7 @@
     <Compile Include="Exercise18b\Hero.cs" />
     <Compile Include="Exercise18b\NumberGenerator.cs" />
     <Compile Include="Exercise18b\Runner.cs" />
-    <Compile Include="Exercise18b\RunnerSolution.cs" />
+    <Compile Include="Exercise18b\SolutionRunner.cs" />
     <Compile Include="Exercise18\CubeCalculator.cs" />
     <Compile Include="Exercise18\CubeCalculatorSolution.cs" />
     <Compile Include="Exercise19\ForLoops.cs" />
@@ -116,12 +116,11 @@
     <None Include="Exercise18\README.md" />
     <None Include="Exercise19a\README.md" />
     <None Include="Exercise19\README.md" />
+    <None Include="Exercise20\README.md" />
     <None Include="NC1CalculateChange\README.md" />
     <None Include="NC2FindOldestPerson\README.md" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Exercise20\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

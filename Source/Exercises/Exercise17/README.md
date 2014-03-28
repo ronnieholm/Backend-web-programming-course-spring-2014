@@ -1,6 +1,6 @@
 ﻿# Exercise 17: While loops 1
 
-This exercise is about observing how a few counter-controlled while-loops work, 
+This exercise is about observing how a few counter-controlled while-loops work 
 and then try to code a few on your own.
 
   1. In the file WhileLoops.cs four cases of while-loops (Case 1-4) have been 

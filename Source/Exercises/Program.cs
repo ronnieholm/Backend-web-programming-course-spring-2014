@@ -1,5 +1,4 @@
-﻿using Exercises.Exercise18;
-using Exercises.Exercise18a;
+﻿using Exercises.Exercise17;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +8,8 @@ using System.Threading.Tasks;
 namespace Exercises {
     class Program {
         static void Main(string[] args) {
-            CorrectChangeSolution s = new CorrectChangeSolution();
-            s.Run();
-
-            //SolutionRunner r = new SolutionRunner();
-            //r.Run();
+            Runner r = new Runner();
+            r.Run();
         }
     }
 }

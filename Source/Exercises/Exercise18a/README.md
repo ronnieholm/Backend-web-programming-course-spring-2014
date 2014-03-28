@@ -1,11 +1,12 @@
 ﻿# Exercise 18: Correct change
 
 This exercise is about calculating the correct change when a customer pays a due 
-amount with too much cash. Example: A customer has to pay 266 kr., but pays 
+amount with too much cash. Example: A customer has to pay 266 kr, but pays 
 500 kr. The customer must then receive 234 kr. in change. The tricky part is 
 to figure out how to pay this amount using ordinary bills and coins and paying 
-back as few bills and coins as possible. In the above case, the correct way 
-to pay back correct change would be:
+back as few bills and coins as possible. 
+
+In the above case, the correct way to pay back correct change would be:
 
   - 1 200-kr bill
   - 1 20-kr coin

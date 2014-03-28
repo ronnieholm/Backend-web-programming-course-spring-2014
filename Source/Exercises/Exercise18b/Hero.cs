@@ -49,7 +49,7 @@ namespace Exercises.Exercise18b {
 
         // Checks if the Hero is dead, defined as having 0 or less hit points...
         public bool IsDead() {
-            return (currentHitPoints <= 0);
+            return currentHitPoints <= 0;
         }
     }
 }

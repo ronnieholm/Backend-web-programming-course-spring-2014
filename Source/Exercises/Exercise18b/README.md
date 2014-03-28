@@ -1,14 +1,14 @@
 ﻿# Exercise 18: Beast battle
 
-In this exercise, we will see how several classes can work together 
+In this exercise we will see how several classes can work together 
 for a more complex task. The project is supposed to model a very 
-simple game, where a "hero" can battle a "beast" until either beast 
+simple game where a "hero" can battle a "beast" until either beast 
 or hero is dead.
 
 The project contains four classes which are described in general 
 terms here. See the code for more details:
 
-  - The NumberGenerator class, with the method GetRandom-NumberInInterval. 
+  - The NumberGenerator class with the method GetRandomNumberInInterval. 
     This is a helper class for generating random numbers.
   - The BattleLog class where individual strings can be "saved" and later 
     on printed to the screen.
@@ -27,8 +27,8 @@ game mechanics from many popular role-playing games (RPG).
      how they work. Note in particular how the Hero and Beast classes make 
 	 use of the NumberGenerator and BattleLog classes.
   2. See if you can figure out how to code a battle between a Hero and a 
-     Beast (until the death). This is done in InsertCodeHere.cs. The 
-	 pre-made code creates one object of each of the classes. YOUR JOB is 
+     Beast (until the death). This is done in Runner class. The 
+	 pre-made code creates one object of each of the classes. Your job is 
 	 to add code that makes the Hero object battle against the Beast object.  
 	 This will require some thinking, so before starting to code, try to 
 	 sketch out how a battle proceeds in detail. You will probably need a 
