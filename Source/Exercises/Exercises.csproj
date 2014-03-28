@@ -87,6 +87,8 @@
     <Compile Include="Exercise19a\DrawingToolSolution.cs" />
     <Compile Include="Exercise19\ForLoops.cs" />
     <Compile Include="Exercise19\ForLoopsSolution.cs" />
+    <Compile Include="Exercise20\MathLib.cs" />
+    <Compile Include="Exercise20\MathLibSolution.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />
     <Compile Include="NC2FindOldestPerson\Solution.cs" />
     <Compile Include="Program.cs" />

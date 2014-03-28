@@ -1,4 +1,4 @@
-﻿using Exercises.Exercise18a;
+﻿using Exercises.Exercise20;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Exercises {
     class Program {
         static void Main(string[] args) {
-            CorrectChangeSolution r = new CorrectChangeSolution();
+            Runner r = new Runner();
             r.Run();
         }
     }
