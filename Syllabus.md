@@ -69,10 +69,6 @@ This guide indicates which parts of the book are relevant for a specific topic.
 	  <td>140-146</td>
 	</tr>
 	<tr>
-	  <td>Foreach-loop</td>
-	  <td>95</td>
-	</tr>
-	<tr>
 	  <td>Arrays</td>
 	  <td>92-98</td>
 	</tr>
