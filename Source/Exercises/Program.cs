@@ -10,6 +10,8 @@ namespace Exercises {
         static void Main(string[] args) {
             ListExamplesSolution s = new ListExamplesSolution();
             s.Run();
+
+            // testing 1 2 3
         }
     }
 }
