@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Exercises {
     class Program {
         static void Main(string[] args) {
-            ListExamplesSolution r = new ListExamplesSolution();
+            ListExamplesSolution  r = new ListExamplesSolution();
             r.Run();
         }
     }
