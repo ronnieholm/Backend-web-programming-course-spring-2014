@@ -39,20 +39,25 @@ namespace Exercises.Exercise23 {
 
         // Add the given car to the car pool
         public void AddCarToPool(Car aCar) {
-            // Complete this method
+            carList.Add(aCar.GetLicensePlate(), aCar);
         }
 
         // Remove the car with the given license plate from the car pool.
         // If the license plate does not exist, do nothing
         public void RemoveCarFromPool(String licensePlate) {
-            // Complete this method
+            if (carList.ContainsKey(licensePlate)) {
+                carList.Remove(licensePlate);
+            }
         }
 
         // If a Car object corresponding to the given license plate exists, return it.
         // Otherwise, return null
         public Car LookupCar(String licensePlate) {
-            // Complete this method
-            return null;
+            if (carList.ContainsKey(licensePlate)) {
+                return carList[licensePlate];
+            } else {
+                return null;
+            }
         }
 
         // Print out all cars in the pool
