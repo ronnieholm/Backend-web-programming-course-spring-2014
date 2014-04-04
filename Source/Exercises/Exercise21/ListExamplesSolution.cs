@@ -74,6 +74,13 @@ namespace Exercises.Exercise21 {
             // Tip: Think in detail about how you would do this manually
             Console.WriteLine("Start of Case 8");
             int smallest = aListOfInt[0];
+
+            //for(int i = 1; int < aListOfInt.Count; i++) {
+            //    if (i < smallest) {
+            //        smallest = i;
+            //    }
+            //}
+
             foreach (int i in aListOfInt) {
                 if (i < smallest) {
                     smallest = i;

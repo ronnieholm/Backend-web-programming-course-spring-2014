@@ -1,4 +1,4 @@
-﻿# Exercise 22: Introducing lists
+﻿# Exercise 22: Book catalog
 
 This exercise illustrates the concept of a *catalog*. A catalog 
 is a class that can store and use data of a certain type, without 

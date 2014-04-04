@@ -128,6 +128,7 @@
     <None Include="Exercise20\README.md" />
     <None Include="Exercise21\README.md" />
     <None Include="Exercise22\README.md" />
+    <None Include="Exercise23\README.md" />
     <None Include="NC1CalculateChange\README.md" />
     <None Include="NC2FindOldestPerson\README.md" />
   </ItemGroup>
