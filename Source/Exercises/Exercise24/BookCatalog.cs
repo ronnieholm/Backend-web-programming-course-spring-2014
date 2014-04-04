@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercises.Exercise22 {
-    class SolutionRunner {
+namespace Exercises.Exercise24 {
+    class Runner {
         public void Run() {
             Book b1 = new Book("AD1337", "Java for All", "John Potter", 352);
             Book b2 = new Book("XS3220", "Gardening", "Alex Sohn", 220);
             Book b3 = new Book("DD0095", "Cars in the USA", "Susan Dreyer", 528);
             Book b4 = new Book("PT1295", "Copenhagen Dawn", "Dan Mygind", 104);
 
-            BookCatalogSolution theCatalog = new BookCatalogSolution();
+            BookCatalog theCatalog = new BookCatalog();
             theCatalog.AddBook(b1);
             theCatalog.AddBook(b2);
             theCatalog.AddBook(b3);
@@ -40,35 +40,29 @@ namespace Exercises.Exercise22 {
         }
     }
 
-    class BookCatalogSolution {
-        private List<Book> books;
-        private int Age;
+    class BookCatalog {
+        private Dictionary<string, Book> books;
 
-        public BookCatalogSolution() {
-            books = new List<Book>();
+        public BookCatalog() {
+            books = new Dictionary<string, Book>();
         }
 
         public void AddBook(Book aBook) {
-            // Add the given Book object to the List
-            books.Add(aBook);
+            // Add code that can add the given Book object to the list
         }
 
         public void PrintAllBooks() {
-            // For all the books, print out the information for each book
-            foreach (Book b in books) {
-                Console.WriteLine(b.GetAllInformation());
-            }
+            // Add code that can print all books in the list
+            // Hint: You will need a repetition statement
         }
 
         public Book LookupBook(string isbn) {
             Book matchingBook = null;
 
-            // Look through all the books in the List
-            foreach (Book b in books) {
-                if (b.GetISBN() == isbn) { // We got a match!
-                    matchingBook = b; // Now matchingBook refers to the book with the matching ISBN
-                }
-            }
+            // Add code that will find a book (if any) in the list
+            // which has a matching ISBN number. The variable matchingBook
+            // should be set to this book
+            // Hint: You can use isbn to lookup the book in the Dictionar
 
             return matchingBook;
         }

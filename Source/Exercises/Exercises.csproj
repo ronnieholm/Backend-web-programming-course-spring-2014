@@ -97,6 +97,12 @@
     <Compile Include="Exercise23\Car.cs" />
     <Compile Include="Exercise23\CarPool.cs" />
     <Compile Include="Exercise23\CarPoolSolution.cs" />
+    <Compile Include="Exercise24\Book.cs" />
+    <Compile Include="Exercise24\BookCatalog.cs" />
+    <Compile Include="Exercise24\BookCatalogSolution.cs" />
+    <Compile Include="Exercise25\StudentInfoSolution.cs" />
+    <Compile Include="Exercise25\Student.cs" />
+    <Compile Include="Exercise25\StudentInfo.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />
     <Compile Include="NC2FindOldestPerson\Solution.cs" />
     <Compile Include="Program.cs" />
@@ -132,6 +138,8 @@
     <None Include="Exercise21\README.md" />
     <None Include="Exercise22\README.md" />
     <None Include="Exercise23\README.md" />
+    <None Include="Exercise24\README.md" />
+    <None Include="Exercise25\README.md" />
     <None Include="NC1CalculateChange\README.md" />
     <None Include="NC2FindOldestPerson\README.md" />
   </ItemGroup>

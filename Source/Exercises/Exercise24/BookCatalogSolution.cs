@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercises.Exercise22 {
+namespace Exercises.Exercise24 {
     class SolutionRunner {
         public void Run() {
             Book b1 = new Book("AD1337", "Java for All", "John Potter", 352);
@@ -41,21 +41,22 @@ namespace Exercises.Exercise22 {
     }
 
     class BookCatalogSolution {
-        private List<Book> books;
-        private int Age;
+        private Dictionary<string, Book> books;
 
         public BookCatalogSolution() {
-            books = new List<Book>();
+            books = new Dictionary<string, Book>();
         }
 
         public void AddBook(Book aBook) {
-            // Add the given Book object to the List
-            books.Add(aBook);
+            // Add the given Book object to the Dictionary
+            // ISBN is the Key for a Book object
+            books.Add(aBook.GetISBN(), aBook);
         }
 
         public void PrintAllBooks() {
-            // For all the books, print out the information for each book
-            foreach (Book b in books) {
+            // For all books in the Dictionary, print out information for each book
+            foreach (KeyValuePair<string, Book> kvp in books) {
+                Book b = kvp.Value;
                 Console.WriteLine(b.GetAllInformation());
             }
         }
@@ -63,11 +64,9 @@ namespace Exercises.Exercise22 {
         public Book LookupBook(string isbn) {
             Book matchingBook = null;
 
-            // Look through all the books in the List
-            foreach (Book b in books) {
-                if (b.GetISBN() == isbn) { // We got a match!
-                    matchingBook = b; // Now matchingBook refers to the book with the matching ISBN
-                }
+            // See if a book with the given key (isbn) is in the Dictionary
+            if (books.ContainsKey(isbn)) {
+                matchingBook = books[isbn]; // Now matchingBook refers to the book with the matching ISBN
             }
 
             return matchingBook;
