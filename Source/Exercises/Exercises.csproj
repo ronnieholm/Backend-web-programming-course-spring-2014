@@ -91,6 +91,8 @@
     <Compile Include="Exercise20\MathLibSolution.cs" />
     <Compile Include="Exercise21\ListExamples.cs" />
     <Compile Include="Exercise21\ListExamplesSolution.cs" />
+    <Compile Include="Exercise22\Book.cs" />
+    <Compile Include="Exercise22\BookCatalog.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />
     <Compile Include="NC2FindOldestPerson\Solution.cs" />
     <Compile Include="Program.cs" />
@@ -124,6 +126,7 @@
     <None Include="Exercise19\README.md" />
     <None Include="Exercise20\README.md" />
     <None Include="Exercise21\README.md" />
+    <None Include="Exercise22\README.md" />
     <None Include="NC1CalculateChange\README.md" />
     <None Include="NC2FindOldestPerson\README.md" />
   </ItemGroup>
