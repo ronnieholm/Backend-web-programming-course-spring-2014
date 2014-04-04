@@ -94,6 +94,9 @@
     <Compile Include="Exercise22\Book.cs" />
     <Compile Include="Exercise22\BookCatalog.cs" />
     <Compile Include="Exercise22\BookCatalogSolution.cs" />
+    <Compile Include="Exercise23\Car.cs" />
+    <Compile Include="Exercise23\CarPool.cs" />
+    <Compile Include="Exercise23\CarPoolSolution.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />
     <Compile Include="NC2FindOldestPerson\Solution.cs" />
     <Compile Include="Program.cs" />

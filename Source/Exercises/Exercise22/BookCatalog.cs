@@ -32,7 +32,7 @@ namespace Exercises.Exercise22 {
 
         public void SafePrintBookInformation(Book aBook) {
             if (aBook == null) {
-                Console.WriteLine("Book was null");
+                Console.WriteLine("Book was null...");
             } else {
                 Console.WriteLine(aBook.GetAllInformation());
             }
