@@ -1380,3 +1380,248 @@ In general:
   - Use for-loops for counter-controlled repetitions
   - Use while-loops for sentinel-controlled repetitions
 
+# Arrays
+
+## Motivation
+
+We will  often need to represent multiple entities of the 
+same type, called a collections, of
+
+  - Integer measurement results
+  - Student objects
+  - Names as text strings
+
+Using a single variable for each instance quickly becomes quite 
+unmanageable. Imagine having to represent 100 students in your 
+program and having variables like:
+
+    Student s1 = ...;
+    Student s2 = ...;
+    Student s3 = ...;
+    // ...
+    Student s100 = ...;
+
+An *array object* can store many instances of identical type and 
+still allows manipulation of individual elements. This is a much 
+more flexible solution.
+
+## Declaration
+
+Since an array is indeed an object, it is
+
+  - Created with a *new* statement
+  - Referred to by a variable (by reference)
+
+The variable is declared as follows:
+
+    int[] numberArray; // Declares a variable
+
+The creation of the array itself looks like:
+
+    // Array with 10 elements
+    numberArray = new int[10];
+	
+It is important to notice the use of []. Also note that the actual 
+size of the array is specified with its creation, *not* its declaration. 
+
+An array has a fixed size, but it can be changed by using the *resize* 
+method, defined in the *Array* class:
+
+    // Resize array to 20 elements
+    Array.resize(ref numberArray, 20);
+
+Resizing is somewhat expensive so we should avoid it. There are other 
+and much better ways to deal with the situation where the number of 
+elements is not know in advance and we will discuss them later.
+
+## Usage
+
+Once the array contains elements (see later), we can use each element 
+just as it was an ordinary variable.
+
+Each specific element is specified by its *position* in the array. We 
+usually call this the *index*.
+
+    // Add 2 to the fifth element in the array
+    numberArray[4] = numberArray[4] + 2;
+
+Catch: the first element in the array has index 0 (zero). In an array 
+of 10 elements the last element has index 9.
+
+Notice that we can use array elements both on the left-hand side and 
+the right-hand side in an expression. They act just as any other 
+variable of that type.
+
+We can initialise an array directly in the code if the values for 
+all elements are fixed:
+
+    // Initialises the array to five elements
+    int[] numberArray = {12, 42, -9, 34, 10};
+
+We will very often use arrays together with some type of repetition statement.
+
+    int[]numberArray = new int[10];
+    // Do some initialisation...
+
+    for (int index = 0; index < 10; index++) {
+        Console.WriteLine(numberArray[index]);
+    }
+
+This will print out the values of each element in the array, starting 
+from the element with index 0, up to the element with index 9 (
+*not* 10).
+
+We can ask an array how long it is, giving us some more robust code 
+(in the sense that if we changed the length of the array in the array 
+creation statement, we don’t have to remember to change the value in 
+the condition as well):
+
+    for (int index = 0; index < numberArray.Length; index++) {
+        Console.WriteLine(numberArray[index]);
+    }
+
+If we try to use an index which is "out of bounds" (negative or 
+greater than the index of the last element), the code will 
+generate/throw an *exception*, indicating that an error occurred 
+during the execution of the program.
+
+## The foreach statement
+
+Iterating through all elements of an array, or any type of 
+collection, is a common task in programming. So common in fact
+that a special type of repetition statement exists for that 
+purpose. It's called the *foreach* statement.
+
+Purpose: for each element in the collection, do a certain action.
+
+    foreach (int number in numberArray) {
+        Console.WriteLine(number);
+    }
+
+Here the variable *number* will take on the value of each of 
+the elements in the collection, in this case the type is *int*, 
+but it can be any type.
+
+It is syntactically simpler and there is no risk of getting 
+the initialization and/or condition wrong.
+
+However, it isn't as versatile as the general *for*-loop and used
+only in connection with processing of collections, and typically 
+if we wish to do something for all the elements in the collection.
+
+## Lists
+
+Arrays are useful but they are a bit "old-school" in their style:
+
+  - Fixed-size (or resize "manually")
+  - Not much help with common tasks (insertion, search, ...)
+
+The .NET Framework Class Library, which is a large set of predefined 
+classes available to the programmer, provides a number of classes 
+for handling collections of objects (called *collection classes*), 
+which provide methods for these tasks.
+
+We do not need to worry about size issues. Collections are 
+automatically resized for us.
+
+We have many methods available for us (Add, Clear, Remove, ...).
+
+One of the simplest of these collection classes is the List class.
+When declaring a List object, we must provide the type of the 
+elements in the list as a "parameter" to the *List* type:
+
+    List<int> numberList; // A list of integers
+
+When we create a List object, we do *not* need to specify any size:
+
+    numberList = new List<int>();
+
+We can now call various methods on the *List* object, like:
+
+  - Add
+  - Clear
+  - Contains
+  - Count
+  - Remove
+  - ...
+
+Note that the *List* class actually uses an array "under the covers".
+
+Most commonly used method is *Add* which adds an element to the 
+back of the list (list gets longer). We can use *Insert* to insert 
+an element at a specific position.
+
+We get hold of an element in the same way as for arrays: we use the 
+[] notation. Again index 0 for the first element.
+
+    numberList[2] // The element with index 2
+
+The method *Contains* can tell us if a specific element is contained 
+in the list:
+
+    // Is an element with value 77 in the list?
+    numberList.Contains(77);
+
+Many useful methods in the *List* class. See documentation or read 
+in pop-up list.
+
+## Dictionary
+
+The *List* class is a significant improvement of old-school arrays, 
+but some tasks are still somewhat difficult.
+
+We very often have classes where one instance field serves as a 
+*key* to the data (i.e. uniquely identifies it). CPR for a person, 
+license plate for a car, ISBN for a book, etc.
+
+Common task: Given the key, find the corresponding object.
+
+This is a bit hard to do efficiently when using lists. You have 
+to search through the list step by step, until you either find 
+the correct element or can conclude that it is not there. Code 
+must be explicitly written, and can be rather slow (has to search 
+through much data).
+
+The *Dictionary* class allows us to store a Key-Value relationship.
+
+When declaring a *Dictionary* object, we must provide the type 
+of the Key and the type of the Value as "parameters" to the 
+*Dictionary* type:
+
+    // Key is String (CPR)
+    // Value is Student object
+    Dictionary<String, Student> students;
+
+When we wish to add a Key-Value pair to the dictionary, we use 
+the *Add* method, which now takes two parameters:
+
+    students.Add(“020388-1208”, aStudent);
+
+When we wish to remove something from the dictionary, we only need 
+to provide the key.
+
+    students.Remove("020388-1208");
+
+If we want to retrieve data about a student, we also only need 
+to provide the key. The *Dictionary* class can then retrieve the 
+data, and do so very efficiently.
+
+The syntax is similar to the *List* syntax, but instead of a 
+numerical index, we use the key value as index:
+
+    Student aStudent = students["020388-1208"];
+
+Note that if no student with that specific key exists, we get an 
+error. We can use the method *ContainsKey* to check if the 
+dictionary contains the key at all. If not, we should not try 
+to look up the value in this way.
+
+In general, you use
+
+  - *List*: if you can look up the data by numerical index or 
+     do not have any particular need for looking up data
+  - *Dictionary*: If you need to look up data often and there 
+     is a natural key for the data
+
+Remember to check the documentation of available methods when 
+using these classes.
