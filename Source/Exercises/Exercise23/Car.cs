@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace Exercises.Exercise23 {
     class Car {
-        private String licensePlate;
-        private String brand;
-        private String model;
+        private string licensePlate;
+        private string brand;
+        private string model;
 
-        public Car(String plate, String brand, String model) {
+        public Car(string plate, string brand, string model) {
             this.licensePlate = plate;
             this.brand = brand;
             this.model = model;
         }
 
-        public String GetLicensePlate() {
+        public string GetLicensePlate() {
             return licensePlate;
         }
 
-        public String GetBrand() {
+        public string GetBrand() {
             return brand;
         }
 
-        public String GetModel() {
+        public string GetModel() {
             return model;
         }
     }

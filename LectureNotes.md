@@ -1625,3 +1625,526 @@ In general, you use
 
 Remember to check the documentation of available methods when 
 using these classes.
+
+# The concept of Inheritance
+
+Another feature of OO is *code reuse*. We can (possibly) reuse 
+code when we define new classes.
+
+This allows us to implement class hierarchies in C#. A derived 
+class should have an *is-a* relationship to the base class.
+
+What is an *is-a* relationship? Consider the concepts *Vehicle*
+and *Car*. A car is definitely a special type of vehicle. In other 
+words: a car *is* a vehicle. So *Car* has an *is-a* relationship 
+to *Vehicle*. This is different than the relationship between, 
+say, *Car* and *Wheel*. A wheel is not a special type of car, 
+but a car definitely has wheels. We say that *Car* has a *has-a*
+relationship to *Wheel*.
+
+The mechanism for implementing an *is-a* relationship in code is the 
+concept of *inheritance*. A class may inherit from a base class, meaning 
+that all methods and instance fields in the base class are also included 
+in the derived class.
+
+## Base Classes and Derived Classes
+
+Syntax for a derived class:
+
+    // This class inherits from Student
+    class GraduateStudent : Student {
+        ...
+    }
+
+The derived class can use all public methods in the base class, just 
+as any other user. It cannot, however, use private methods and instance 
+fields.
+
+The access level *protected* allows usage by derived classes, but not 
+by external users.
+
+It's tempting to make instance fields and methods *protected* but not 
+recommended. Potential problems:
+
+  - Base class "loses control" over instance fields since the derived 
+    class can access and manipulate them.
+  - Derived class may depend too much on representation
+
+If the base class only has constructors that contain parameters, i.e.,
+no default constructor, we must explicitly invoke the base class 
+constructor from the derived class, providing the necessary parameters.
+
+Syntax for calling base class constructors:
+
+    public GraduateStudent(string bachelorDegree, string name, int yearOfBirth)
+    : base(name, yearOfBirth) {
+        this.bachelorDegree = bachelorDegree;
+    }
+
+Inheritance also allows us to replace (called "to override") the 
+implementation of a base class method with an alternative implementation 
+in the derived class.
+
+The base class must allow that a method can be overridden by using 
+the *virtual* keyword:
+
+    // Implementation in Student (base)
+    public virtual string GetName() {
+        return name;
+    }
+
+The derived class must also indicate that it is overriding the 
+implementation by using the keyword *override*:
+
+    // Implementation in GraduateStudent (derived)
+    public override string GetName() {
+        return "Dr. " + base.GetName();
+    }
+
+## The Object class
+
+All classes in C# inherit, directly or indirectly, from a "mother 
+of all classes" called Object. This base class contains seven methods:
+
+  - Equals
+  - Finalize
+  - GetHashCode
+  - GetType
+  - MemberwiseClone
+  - ReferenceEquals
+  - ToString
+
+Some of these methods need to be overrided if we want a certain 
+class to have certain abilities, like being able to store objects 
+of that type in a Dictionary-based container (*GetHashCode*), to 
+define equality in a non-trivial way (*Equals*), etc.
+
+This is why we always have quite a lot of methods available on all 
+objects in Visual Studio. They all inherit methods from *Object*.
+
+## Polymorphic variables and behavior
+
+A great advantage of inheritance is *code reuse*. Another great 
+advantage is being able to program towards general (base) classes, 
+instead of more specific (derived) classes. This makes it easy to 
+extend code without much modification.
+
+OO Design Principle: Code should be closed for modification, but 
+open for extension.
+
+Consider these classes:
+
+  - *Shape* (has a virtual method *Draw*)
+  - *Circle* (inherits from Shape, overrides *Draw*)
+  - *Triangle* (inherits from Shape, overrides *Draw*)
+
+Then is is legal code:
+
+    Shape shapeA = new Shape();
+    Circle circleA = new Circle();
+    Triangle triA = new Triangle();
+
+But also this:
+
+   Shape shapeA = new Shape();
+   Shape circleA = new Circle();
+   Shape triA = new Triangle();
+
+Why is the last part interesting? Because we can then write code 
+that does not know the true type of an object, but can still 
+use its methods:
+
+    public void DrawAShape(Shape s) {
+        Console.WriteLine("Now I draw something");
+        s.Draw(); // What is s actually?
+    }
+
+The true type of s may be e.g. *Circle* or *Triangle*, but the 
+method does not need to know that.
+
+The call of *Draw* on s may exhibit different behavior depending 
+on the actual type of s. This is known as *polymorphic behavior* 
+(Polymorphic: many forms).
+
+A further advantage is extensibility. If we need more shapes we 
+can just add them to the shape "package" as long as they inherit 
+from *Shape*. We will then *not* need to change the client code, 
+since the client code only knows the base class. No modification, 
+only extension.
+
+## Abstract methods and classes
+
+A problem in the *Shape* class is what the proper implementation 
+of the Draw method is?
+
+Do nothing, perhaps. Could work but does it even make sense to 
+create a *Shape* object in itself? Not really. *Shape* is just 
+a "common denominator" for shape-oriented classes, but a *Shape*
+object in itself is not very useful.
+
+By turning the *Draw* method into an *abstract* method, we can 
+achieve several advantages:
+
+  - We do not have to provide a (meaningless) implementation in 
+    the base class.
+  - We cannot create any objects of the base class.
+  - A derived class *must* provide an implementation of the abstract 
+    method(s).
+
+Note the difference between virtual and abstract:
+ 
+  - Virtual: *has* an implementation in the base class, *can* be 
+    overridden. Use when a sensible implementation of the method 
+	exists for the base class.
+  - Abstract: *has no* implementation in the base class, *must* 
+    be overridden Use when no sensible implementation of the method 
+	exists for the base class.
+	
+If a class definition contains just one abstract method the whole 
+class also becomes abstract.	
+
+# Interfaces
+
+We may be in a situation where *all* methods in a class should be 
+abstract. Such a class is called an *interface*.
+
+Interfaces are used quite heavily in C#. Think of an interface as 
+a "contract". The interface defines the methods available in any 
+implementation of the interface and should also include a description 
+of the functionality that should be expected. It does however *not*
+provide any specific implementation.
+
+Interfaces follow a slightly different syntax:
+
+    public interface IShape {
+        void Draw();
+    }
+
+  - Usually starts with an I
+  - Uses the keyword interface instead of class
+  - All methods are public (but we do not write "public" explicitly)
+  - No instance fields
+
+Advantages are the same as before (allows polymorphic behavior), just 
+taken to the extreme. Two classes that both implement the interface 
+may be completely unrelated with regards to implementation.
+
+The C# class library contains many interfaces in itself, e.g., 
+*IComparable*.
+
+# Defensive programming
+
+In real-life scenarios, we have to prepare for unexpected data values 
+and exceptional situations in general.
+
+What can go wrong? Some examples:
+
+  - Value is correct type-wise but is outside the range of meaningful 
+    values (example: A test score is supposed to be between 0 and 100, 
+	but an *int* can represent many other values, like e.g., -27, 22987).
+  - Value is used for indexing an array, only values from 0 (zero) up 
+    to (length – 1) are meaningful. Other values will produce an error.
+  - A string does not follow a given syntax (e.g. for a license plate).
+  - A variable that is supposed to refer to an object has the value 
+    *null* instead.
+  - A file contains data that has a different format than expected, or 
+    the file is missing.
+  - A database is for some reason unavailable.
+  - An Internet connection is for some reason unavailable.
+
+The action of the program in the above cases is situation-dependent. 
+Program may halt, show an error message, silently handle the error, 
+fall back to a default value, etc.
+
+In any case, we should be prepared for handling all possible situations 
+in a graceful manner.
+
+In practice we then have to validate all critical variables before 
+they are used.
+
+When should we validate?
+
+  - Early: As soon as the variable has the value that will be used 
+    in a critical situation.
+  - Late: Just before the variable is actually used
+
+When to validate is also situational-dependent. Argument against early 
+validation could be that value might not be used at all.
+
+We detect an error during program execution. Now what? Management 
+of errors can be broken down into several tasks:
+
+  - *Detection*. Realising that an error situation has occurred
+  - *Signaling*. Making the surrounding code aware that an error 
+     has been detected
+  - *Capturing*. Taking responsibility for handling of the error
+  - *Handling*. Actually performing the error handling actions
+
+All these actions can be distributed in the code. This may imply 
+that the detecting part of the code does *not* know how to handle 
+the error.
+
+Problems to consider
+
+  - How do we signal an error?
+  - How do we capture an error?
+  - What should happen after the error has been handled?
+
+The mechanism for managing errors in C#, and many other OO-languages,
+is through *exceptions*.
+
+## Exceptions - throw
+
+An exception is in itself "just another class".
+
+An exception object is created just as any other object. Use new 
+and the proper class.
+
+The interesting part: we can *throw* and *catch* exceptions.
+
+If an "exceptional situation" (an error) occurs, the code can 
+throw an exception:
+
+    public void deposit(int amount) {
+        if (amount < 0) {
+            NegativeAmountException ex =
+                new NegativeAmountException("...");
+            throw ex;
+        }
+        balance += amount;
+    }
+
+Note the use of the *throw* keyword.
+
+As soon as an exception is thrown no more code in the method is executed.
+
+We throw because we do *not* know how to handle the error.
+
+## Exceptions - catch
+
+Throwing an exception signals to the outside world that an error 
+has occurred.
+
+The part of the code that wishes to capture the error must catch 
+the exception.
+
+Code that might throw an exception should be executed within a 
+try-catch block:
+
+    BankAccount myAcc = new BankAccount();
+    try {
+        int amount = ...; // From user
+        myAcc.deposit(amount);
+    } catch (NegativeAmountException ex) {
+        Console.WriteLine(“Negative amount not allowed”);
+    }
+
+Caller is aware that an exception may occur, and decides how to handle it.
+
+General principle: *Throw early, catch late*.
+
+  - Throw as soon as an error is detected
+  - Only catch if you really know how to handle the error (tempting 
+    just to silently "consume" the error)
+
+## Exceptions - catch
+
+What code is executed *after* the catch-part has been executed?
+
+Control does not return to the code that threw the exception. It returns 
+to the first statement *after* the catch-block. More precisely after 
+the *last* catch-block since you can have several catch-blocks, handling 
+different exceptions.
+
+This may cause problems if the code that threw the exception has 
+claimed some system resources, like opening a file.
+
+How can we make sure that a file for instance is closed, regardless of 
+whether or not an exception has occurred?
+
+In C# a *finally* clause is used for this purpose. Code placed in a 
+finally-block is *guaranteed* to be executed, exception or not.
+
+    try {
+        theFile.open(fileName);
+        ... // File processing
+    } catch (IOException ex) {
+        Console.WriteLine(“File processing failed...”);
+    } finally {
+        theFile.close();
+    }
+
+Code for releasing resources should be in a *finally*-block.
+
+## Exceptions - details
+
+A lot of the methods in the class library may throw exceptions. Just 
+dividing by zero will cause an exception.
+
+How can we learn which exceptions a method may throw? Look in 
+the documentation! Documenting exceptions is also an important 
+part of the documentation of your own code.
+
+C# contains a class hierarchy of exception classes. The base class is 
+called *Exception*.
+
+Use the built-in exception classes if they are appropriate; otherwise 
+create your own exception classes. Your own exception classes *must*
+inherit from an existing exception class since you can only throw an 
+object which inherit from *Exception*.
+
+An exception object has a number of properties which provide more 
+information about the nature of the exception, for instance the 
+*Message* property. See the documentation for further information.
+
+Should I *always* throw exceptions in case of errors? No, not if 
+you are absolutely sure how the error should be handled.
+
+Remember to consider architectural issues; it may be unwise to 
+present an error to a user in a GUI-specific manner inside a 
+business-logic class.
+
+# Constants
+
+Suppose we wish to create a program for a simple simulation of an 
+ecosystem. Many parameters to decide on:
+
+  - Size of simulation grid (x,y)
+  - Initial number of predators
+  - Initial number of prey
+  - Breeding rates
+  - ...
+
+All these values will be constant throughout the execution of the 
+program so they can be set directly in the code:
+
+    for (int x = 0; x < 50; x++) {
+        for (int y = 0; y < 40; y++) {
+            // Do something for each cell…
+        }
+    }
+
+The values might occur many times in the code, e.g. every time we 
+have to do something for the entire grid. There are problems with 
+this approach:
+
+  1. Hard to read the code. What does the value 50 mean in 
+     a specific context?
+  2. If we wish to change the value we will have to do it 
+     in each and every place. We could forget some places.
+
+Much more convenient to use *constants* instead.
+
+A constant is a variable that has a fixed value (hardly a variable then).
+
+Declaration of constants:
+
+    public class EcoSimulation {
+        public const int gridWidth = 50;
+        public const int gridHeigth = 40;
+        ...
+	}
+
+Using constants:
+
+    for (int x = 0; x < gridWidth; x++) {
+        for (int y = 0; y < gridHeigth; y++) {
+            // Do something for each cell…
+        }
+    }
+
+It's much easier to understand the code if the constants have 
+meaningful names. If we need to change e.g. the grid width, we 
+only have to change it in one place.
+
+General principle in programming: we do not want to specify the 
+same information more than once. Analogous with Headings, etc. 
+in Word. An extra layer of indirection.
+
+# Static methods and classes
+
+The standard way of using a class is to:
+
+  - Create an object of the class, using the *new* keyword
+  - Call methods on the object
+
+However, if the class does not contain any kind of state, and thus 
+no instance variables. there isn't really any need to create objects 
+since we cannot change their state.
+
+In that case we can make the class a *static* class:
+
+    static class StringMethods {
+        public static String GetStringSubsection(String s, int start, int end);
+        public static String GetLetterCount(String letter);
+        ....
+	}
+
+When we wish to use the methods in the class we use this syntax:
+
+    int bCount = StringMethods.GetLetterCount("b");
+
+Here we do *not* have to use *new*. We just type the name of the class
+followed by the dot followed by the name of the method.
+
+Note that if we make the entire class *static* it can only contain 
+*static* methods. However, we can also declare methods in an ordinary 
+(non-static) class to be static. This is typically done for methods 
+that do not use or alter the state of the object.
+
+It is also possible to define an instance variable to be *static*. 
+No matter how many objects we then create of that class there will 
+still only be one instance of that variable: it is "shared" amongst
+the objects.
+
+Example could be to keep track of the number of objects that have 
+been created of a given class: define a static instance field, and 
+increase it by one in the class constructor which is executed 
+whenever a new object is created.
+
+Static and non-static elements can be mixed in these ways:
+
+  - A static class can *only* contain static methods and 
+    static instance variables.
+  - A non-static class can contain *both* static and non-
+    static methods and instance variables.
+  - A static method can *only* use static instance fields
+  - A non-static method can use *both* static and non-static 
+    instance variables.
+
+A lot of (static) methods are found in the Math class (part of 
+the .NET class library).
+
+Actually, you have used static classes and methods from day 1. 
+Think of Console.WriteLine(...).
+
+# Enumerations
+
+The primitive types available in C# are often not exactly what we 
+want. Suppose we wish to make a program that deals with fruit, say 
+these five kinds of fruit: Apple, Pear, Cherry, Banana and Kiwi. 
+How do we represent a fruit?
+
+  - As a *bool*: impossible, only two possible values
+  - As an *int*: possible (say values 1 to 5), but not very convenient.
+    We have to check for legal values and code can be hard to 
+	understand (maybe use constants?)
+  - As a *string*: possible, but again we need to check for legal values.
+
+What we would really like is a type that can only hold exactly the 
+five values given above. We cannot then specify a wrong value. This can 
+be done using an *enumerated* type.
+
+    class Fruit {
+        public enum FruitType { Apple, Pear, Cherry, Banana, Kiwi};
+		...
+	}
+
+We can now declare a variable of this type (syntax is slightly awkward, 
+notice the use of "dot"):
+
+    Fruit.FruitType aFruit = Fruit.FruitType.Apple;
+
+The point is: We can *never* assign a wrong value to the variable 
+since the type itself specifies the legal values. Errors are caught 
+at compile-time rather than at run-time.
