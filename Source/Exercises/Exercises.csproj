@@ -105,6 +105,8 @@
     <Compile Include="Exercise25\StudentInfo.cs" />
     <Compile Include="Exercise26\Employee.cs" />
     <Compile Include="Exercise26\EmployeeSolution.cs" />
+    <Compile Include="Exercise27\Employee.cs" />
+    <Compile Include="Exercise27\EmployeeSolution.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />
     <Compile Include="NC2FindOldestPerson\Solution.cs" />
     <Compile Include="Program.cs" />
@@ -143,6 +145,7 @@
     <None Include="Exercise24\README.md" />
     <None Include="Exercise25\README.md" />
     <None Include="Exercise26\README.md" />
+    <None Include="Exercise27\README.md" />
     <None Include="NC1CalculateChange\README.md" />
     <None Include="NC2FindOldestPerson\README.md" />
   </ItemGroup>

@@ -1,4 +1,4 @@
-﻿# Exercise 26: Company info
+﻿# Exercise 26: Company info I
 
 Initially, the project is rather simple. It just contains the class Employee. 
 This class is supposed to serve as a base class for a number of derived classes.

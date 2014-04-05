@@ -1,5 +1,4 @@
-﻿using Exercises.Exercise21;
-using Exercises.Exercise26;
+﻿using Exercises.Exercise27;
 using System;
 using System.Collections.Generic;
 using System.Linq;
