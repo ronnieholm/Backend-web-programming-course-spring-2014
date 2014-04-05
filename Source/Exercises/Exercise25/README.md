@@ -1,4 +1,4 @@
-﻿# Exercise 24: Student info manager
+﻿# Exercise 25: Student info manager
 
 This exercise is about completing the definition of a class that 
 uses a Dictionary object.
