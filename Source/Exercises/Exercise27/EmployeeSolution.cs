@@ -136,4 +136,3 @@ namespace Exercises.Exercise27 {
         }
     }
 }
-C:\Users\roho\Desktop\Backend-web-programming-course-spring-2014\Source\Exercises\Exercise25\

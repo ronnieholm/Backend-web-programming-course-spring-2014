@@ -2,7 +2,7 @@
 
 Initially, the project is rather simple. It just contains the class Employee. 
 This class is supposed to serve as a base class for a number of derived 
-classes just in exercise 26.
+classes just as in exercise 26.
 
   1. Examine the Employee class. You can see that an employee just has a 
      name, nothing more. The rules for how a salary is calculated are now 
