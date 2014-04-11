@@ -1746,9 +1746,9 @@ Then is is legal code:
 
 But also this:
 
-   Shape shapeA = new Shape();
-   Shape circleA = new Circle();
-   Shape triA = new Triangle();
+    Shape shapeA = new Shape();
+    Shape circleA = new Circle();
+    Shape triA = new Triangle();
 
 Why is the last part interesting? Because we can then write code 
 that does not know the true type of an object, but can still 

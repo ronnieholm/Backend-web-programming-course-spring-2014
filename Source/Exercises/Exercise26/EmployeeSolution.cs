@@ -80,7 +80,7 @@ namespace Exercises.Exercise26 {
         public ManagerSolution(string name, int salaryPerMonth, int monthlyBonus)
             : base(name, salaryPerMonth) {
             this.monthlyBonus = monthlyBonus;
-            hoursWorked = 0;
+            this.hoursWorked = 0;
         }
 
         public void SetHoursWorked(int hoursWorked) {
