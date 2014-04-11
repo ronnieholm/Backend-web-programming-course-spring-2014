@@ -150,6 +150,7 @@
     <None Include="Exercise26\README.md" />
     <None Include="Exercise27\README.md" />
     <None Include="Exercise28\README.md" />
+    <None Include="Exercise29\README.md" />
     <None Include="NC1CalculateChange\README.md" />
     <None Include="NC2FindOldestPerson\README.md" />
     <None Include="TheBankJob\README.md" />

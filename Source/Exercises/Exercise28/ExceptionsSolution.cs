@@ -9,21 +9,38 @@ namespace Exercises.Exercise28 {
         public void Run() {
             // Create a new bank account with 25% interest rate
             // (is that legal?)
-            BankAccount theAccount = new BankAccount(25.0);
-            theAccount.Deposit(2000);
+            BankAccount theAccount = null;
+
+            try {
+                theAccount = new BankAccount(25.0);
+            }
+            catch (IllegalInterestRateException) {
+                Console.WriteLine("Too high interest rate");
+            }
+
+            try {
+                theAccount.Deposit(2000);
+            } catch (NegativeAmountExceptionSolution) {
+                Console.WriteLine("Negative amount not allowed");
+            }
 
             // Should this be legal?
-            theAccount.Deposit(-1000);
+            try {
+                theAccount.Deposit(-1000);
+            }
+            catch (NegativeAmountExceptionSolution) {
+                Console.WriteLine("Negative amount not allowed");
+            }
 
             // Try to withdraw
             try {
                 theAccount.Withdraw(3000);
             }
             catch (WithdrawAmountTooLargeException) {
-                Console.WriteLine("You tried to withdraw too much money!");
+                Console.WriteLine("You tried to withdraw too much money");
             }
 
-            Console.WriteLine("Balance is now : {0}", theAccount.GetBalance());
+            Console.WriteLine("Balance is now: {0}", theAccount.GetBalance());
         }
     }
 
@@ -72,7 +89,6 @@ namespace Exercises.Exercise28 {
             if (balance < amount) {
                 throw new WithdrawAmountTooLargeException();
             }
-
             balance = balance - amount;
         }
 
