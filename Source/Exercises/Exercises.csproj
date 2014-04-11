@@ -109,6 +109,8 @@
     <Compile Include="Exercise27\EmployeeSolution.cs" />
     <Compile Include="Exercise28\Exceptions.cs" />
     <Compile Include="Exercise28\ExceptionsSolution.cs" />
+    <Compile Include="Exercise29\StaticExamplesSolution.cs" />
+    <Compile Include="Exercise29\StaticExamples.cs" />
     <Compile Include="NC1CalculateChange\Solution.cs" />
     <Compile Include="NC2FindOldestPerson\Solution.cs" />
     <Compile Include="Program.cs" />
