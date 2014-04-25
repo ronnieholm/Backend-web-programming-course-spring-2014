@@ -1,26 +1,26 @@
-﻿# Exercise 27: The Bank Job
+﻿# The Bank Job
 
 In this exercise we will try to evolve parts of what could become a bank system. 
-Note that the exercise is a bit different from the previous exercises in the 
-sense that the end goal is not as precisely defined as usual. Your own thoughts 
-and ideas are thus quite important here.
+Note that the exercise is a bit different from the previous exercises in that 
+the end goal is not as precisely defined as usual. Your own thoughts and ideas 
+are thus quite important here.
 
-The progression of the exercise will be to start out from a set of more or less 
-well defined requirements, onto a design for a set of class, then to try to code 
-(and improve) such a set of classes, and then finally try to use them for 
-creating a more complex class.
+The progression of the exercise is to start out from a set of more or less 
+well defined requirements and move toward a design for a set of class. Then to 
+try to code (and improve) upon such a set of classes and finally to use them to
+create a more complex application.
 
-You will thus not be "guided" to as high a degree as usual but it will also mean 
-that there is not as such one "final" or "correct" solution. Some of the 
-requirements stated in the assignment might not be clear. You must then choose 
-a way to interpret them.
+You will thus have less guidance than usual, but this also means that there 
+is not as such one "final" or "correct" solution. Some of the requirements 
+stated in the assignment might not be clear. You must then choose a way to 
+interpret them.
 
 ## The setup
 
-We wish to create code representing a bank. We have played around with bank 
-account classes before (in exercise 14) and they have been very simplistic. 
+We wish to create classes representing a bank. We have played around with bank 
+account classes before (in exercise 14) but they were very simplistic. 
 In this setup, the bank wants a more complex model. More specifically, they 
-imagine that the bank should have three kinds of bank accounts:
+imagine the bank should have three kinds of bank accounts:
 
   - A "basic" account where you can deposit and withdraw money and get the 
     balance.
@@ -40,12 +40,12 @@ Furthermore, all bank accounts should include:
 
 ## Step 1
 
-*Your job* in step 1 is to think about (not code) how you could implement this. 
-More specifically, think about what classes we will need for this, what instance 
-fields will be needed, what methods will be needed, and how will the methods 
-actually work. You can make some notes, draw some diagrams, etc, but you do
-not need to code anything yet. When all groups are done with this step, we 
-will do a general class discussion about the results.
+*Your job* in step 1 is to think about (not code) how you could implement this
+application. More specifically, think about what classes you will need for 
+this, what instance fields will be needed, what methods will be needed, and 
+how the methods would actually work. You can make some notes, draw some diagrams, 
+etc, but you do not need to code anything just yet. When all groups are done 
+with this step, we will do a general class discussion about the results.
 
 ## Step 2
 
@@ -66,20 +66,20 @@ already contains a very simple bank account class.
 *Your job* in step 3 is now to see if your code from step 2 could be improved,
 more specifically by using inheritance. The classes representing the different 
 kinds of bank accounts will most likely have some things in common. For 
-instance, they have some common instance fields and methods. Think about how 
-you can use inheritance to avoid having the same instance fields in many 
+instance, they have common instance fields and methods. Think about how 
+you can use inheritance to avoid declaring the same instance fields in many 
 different classes. See if we can use the fact that we can override the 
 implementation of a method, etc.
 
 ## Step 4
 
 *Your job* in step 4 is to develop a single, but probably a bit complex, class 
-called Bank, which is supposed to be the "interface" to the bank system. A 
-programmer using the bank system should thus not create bank account objects 
-directly, but do so through the methods in the Bank class. In fact, it should 
-be possible to do all bank account operations through the Bank class, given 
-the account number of a specific account. The Bank class must thus be able 
-to create, store, and maintain bank account objects (by "store" we just mean 
-while the program is running, not store in a file or database). This will 
+called Bank, which is supposed to be the "interface" or entry point to the bank 
+system. A programmer using the bank system should thus not create bank account 
+objects directly, but should do so through the methods of the Bank class. In 
+fact, it should be possible to do all bank account operations through the Bank 
+class, given the account number of a specific account. The Bank class must thus 
+be able to create, store, and maintain bank account objects (by "store" we just 
+mean while the program is running, not in a file or database). This will 
 require that you think about what methods we need for the Bank class and how 
 bank account objects are stored appropriately inside the Bank class.
