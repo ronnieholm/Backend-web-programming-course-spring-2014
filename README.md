@@ -10,6 +10,7 @@ Classes are Friday 9.00am-1.30pm
 
   <table>
     <tr>
+	  <td>#</th>
 	  <th>Week</th>
 	  <th>Topics</th>
 	  <th>Material</th>
@@ -17,6 +18,7 @@ Classes are Friday 9.00am-1.30pm
 	  <th>Exercises</th>
     </tr>
 	<tr>
+	  <td>1</td>
 	  <td>6</td>
 	  <td>
 		<p>Introduction and setup</p>
@@ -34,6 +36,7 @@ Classes are Friday 9.00am-1.30pm
 	  <td>NC1, NC2</td>
 	</tr>
 	<tr>
+	  <td>2</td>
 	  <td>7</td>
 	  <td>
 		<p>C# basics</p>
@@ -50,6 +53,7 @@ Classes are Friday 9.00am-1.30pm
 	  <td>1, 2, 3, 4, 5, 6</td>
 	</tr>
 	<tr>
+	  <td>3-5</td>
 	  <td>8-11</td>
 	  <td>
 		<p>Using classes and objects</p>
@@ -66,6 +70,7 @@ Classes are Friday 9.00am-1.30pm
 	  <td>7, 8, 9, 9a, 9b, 10, 11, 12</td>
 	</tr>
 	<tr>
+	  <td>6</td>
 	  <td>12</td>
 	  <td>
 		<p>Conditional statements</p>
@@ -81,6 +86,7 @@ Classes are Friday 9.00am-1.30pm
 	  <td>13, 14, 15, 16</td>
 	</tr>
 	<tr>
+	  <td>7</td>
 	  <td>13</td>
 	  <td>
 		<p>Repetition statements</p>
@@ -94,8 +100,8 @@ Classes are Friday 9.00am-1.30pm
 	  <td></td>
 	  <td>17, 18, 18a, 18b, 19, 19a, 20</td>
 	</tr>
-	<!-- skipped the C# programming project #1 -->
 	<tr>
+	  <td>8</td>
 	  <td>14</td>
 	  <td>
 		<p>Data structures</p>
@@ -111,6 +117,7 @@ Classes are Friday 9.00am-1.30pm
 	  <td>21, 22, 23, 24, 25</td>
 	</tr>
 	<tr>
+	  <td>9-10</td>
 	  <td>15-16</td>
 	  <td>
 		<p>Combining classes</p>
@@ -126,6 +133,7 @@ Classes are Friday 9.00am-1.30pm
 	  <td>The Bank Job, 26, 27</td>
 	</tr>
 	<tr>
+	  <td>12-15</td>
 	  <td>17-20</td>
 	  <td>
 		<p>Error handling, "bit & pieces"</p>
