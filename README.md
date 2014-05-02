@@ -74,7 +74,6 @@ Classes are Friday 9am-2pm
 	</tr>
 	<tr>
 	  <td>8</td>
-	  <td>14</td>
 	  <td>
 		<p>Data structures</p>
 		<p>Array and  foreach-loop</p>
