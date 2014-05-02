@@ -6,7 +6,7 @@ the end goal is not as precisely defined as usual. Your own thoughts and ideas
 are thus quite important here.
 
 The progression of the exercise is to start out from a set of more or less 
-well defined requirements and move toward a design for a set of class. Then to 
+well defined requirements and move toward a design for a set of classes. Then to 
 try to code (and improve) upon such a set of classes and finally to use them to
 create a more complex application.
 
