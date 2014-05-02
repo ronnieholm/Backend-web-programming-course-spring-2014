@@ -12,18 +12,16 @@ Room 122
  
 ## Schedule
 
-Classes are Friday 9.00am-1.30pm
+Classes are Friday 9am-2pm
 
   <table>
     <tr>
 	  <td>#</th>
-	  <th>Week</th>
 	  <th>Topics</th>
 	  <th>Exercises</th>
     </tr>
 	<tr>
 	  <td>1</td>
-	  <td>6</td>
 	  <td>
 		<p>Introduction and setup</p>
 		<p>What is BEWP?</p>
@@ -35,7 +33,6 @@ Classes are Friday 9.00am-1.30pm
 	</tr>
 	<tr>
 	  <td>2</td>
-	  <td>7</td>
 	  <td>
 		<p>C# basics</p>
 		<p>Types</p>
@@ -47,7 +44,6 @@ Classes are Friday 9.00am-1.30pm
 	</tr>
 	<tr>
 	  <td>3-5</td>
-	  <td>8-11</td>
 	  <td>
 		<p>Using classes and objects</p>
 		<p>Creating objects</p>
@@ -59,7 +55,6 @@ Classes are Friday 9.00am-1.30pm
 	</tr>
 	<tr>
 	  <td>6</td>
-	  <td>12</td>
 	  <td>
 		<p>Conditional statements</p>
 		<p>if-statement</p>
@@ -70,7 +65,6 @@ Classes are Friday 9.00am-1.30pm
 	</tr>
 	<tr>
 	  <td>7</td>
-	  <td>13</td>
 	  <td>
 		<p>Repetition statements</p>
 		<p>while-loop</p>
@@ -91,7 +85,6 @@ Classes are Friday 9.00am-1.30pm
 	</tr>
 	<tr>
 	  <td>9-10</td>
-	  <td>15-16</td>
 	  <td>
 		<p>Combining classes</p>
 		<p>Inheritance</p>
@@ -101,8 +94,7 @@ Classes are Friday 9.00am-1.30pm
 	  <td>The Bank Job, 26, 27</td>
 	</tr>
 	<tr>
-	  <td>11-14</td>
-	  <td>17-20</td>
+	  <td>11-13</td>
 	  <td>
 		<p>Error handling, "bit & pieces"</p>
 		<p>Defensive programming</p>
@@ -112,5 +104,12 @@ Classes are Friday 9.00am-1.30pm
 		<p>Enumeration types</p>
 	  </td>
 	  <td>28, 29, 30</td>
+	</tr>
+	<tr>
+	  <td>14-15</td>
+	  <td>
+		<p>Review</p>
+	  </td>
+	  <td></td>
 	</tr>
   </table>
