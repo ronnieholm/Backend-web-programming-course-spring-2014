@@ -4,6 +4,12 @@
 
 Room 122
 
+## Material
+
+- <a href="LectureNotes.md">Lecture notes</a>
+- <a href="Syllabus.md">Syllabus</a>
+- <a href="http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-desktop">Visual Studio Express 2013 download</a>
+ 
 ## Schedule
 
 Classes are Friday 9.00am-1.30pm
@@ -133,7 +139,7 @@ Classes are Friday 9.00am-1.30pm
 	  <td>The Bank Job, 26, 27</td>
 	</tr>
 	<tr>
-	  <td>12-15</td>
+	  <td>11-14</td>
 	  <td>17-20</td>
 	  <td>
 		<p>Error handling, "bit & pieces"</p>
