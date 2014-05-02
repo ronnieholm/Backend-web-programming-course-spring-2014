@@ -140,6 +140,6 @@ Classes are Friday 9.00am-1.30pm
 		<p><a href="Syllabus.md">Syllabus</a></p>
       </td>
 	  <td></td>
-	  <td>29, 30, 31</td>
+	  <td>28, 29, 30</td>
 	</tr>
   </table>
