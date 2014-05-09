@@ -33,7 +33,7 @@ namespace Exercises.Exercise29 {
         }
     }
 
-    class ListMethodsSolution {
+    static class ListMethodsSolution {
         public static int FindSmallestNumber(List<int> numbers) {
             if (numbers.Count == 0) {
                 throw new ArgumentException();

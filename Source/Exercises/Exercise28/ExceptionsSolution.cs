@@ -9,16 +9,17 @@ namespace Exercises.Exercise28 {
         public void Run() {
             // Create a new bank account with 25% interest rate
             // (is that legal?)
-            BankAccount theAccount = null;
+            BankAccountSolution theAccount = null;
 
             try {
-                theAccount = new BankAccount(25.0);
+                theAccount = new BankAccountSolution(25.0);
             }
             catch (IllegalInterestRateException) {
                 Console.WriteLine("Too high interest rate");
             }
 
             try {
+                theAccount = new BankAccountSolution(10.0);
                 theAccount.Deposit(2000);
             } catch (NegativeAmountExceptionSolution) {
                 Console.WriteLine("Negative amount not allowed");
