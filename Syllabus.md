@@ -1,9 +1,9 @@
 # Syllabus
 
-  * C#: Karli Watson et al. "Beginning Visual C# 2012 Programming", ISBN 978-1118314418
-  * Supplementary videos from MSDN Channel 9
-
 Since the course does not follow the book closely, not all parts of the book are relevant.
+
+- <a href="http://www.amazon.com/Beginning-Visual-C-2012-Programming/dp/1118314417/ref=sr_1_1?s=books&ie=UTF8&qid=1399059557&sr=1-1&keywords=9781118314418">C#: Karli Watson et al. "Beginning Visual C# 2012 Programming", ISBN 978-1118314418</a>
+- <a href="http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners">The C# Fundamentals Development for Absolute Beginners</a>
 
 This guide indicates which parts of the book are relevant for a specific topic. 
 
@@ -113,6 +113,3 @@ This guide indicates which parts of the book are relevant for a specific topic.
 	  <td>87-90</td>
 	</tr>
   </table>
-
-The C# Fundamentals Development for Absolute Beginners:
-http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners
