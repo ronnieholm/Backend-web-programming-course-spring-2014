@@ -47,7 +47,7 @@ This guide indicates which parts of the book are relevant for a specific topic.
 	</tr>
 	<tr>
 	  <td>Method definitions</td>
-	  <td>105-123, 204-205</td>
+	  <td>105-123</td>
 	</tr>
 	<tr>
 	  <td>If and if/else-statement</td>
