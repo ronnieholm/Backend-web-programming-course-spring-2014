@@ -2133,7 +2133,7 @@ five values given above. We shouldn't be able to specify a wrong value. This can
 be done using an *enumerated* type.
 
     class Fruit {
-        public enum FruitType { Apple, Pear, Cherry, Banana, Kiwi};
+        public enum FruitType { Apple, Pear, Cherry, Banana, Kiwi };
 		...
 	}
 
